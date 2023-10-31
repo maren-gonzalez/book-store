@@ -8,11 +8,11 @@ class Libro(models.Model):
     genero = models.ForeignKey('Genero', on_delete=models.CASCADE)
 
 class Autor(models.Model):
-    autorId = models.AutoField
+    autorId = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
 
 class Genero(models.Model):
-    generoId = models.AutoField
+    generoId = models.AutoField(primary_key=True)
     genero = models.CharField(max_length=30)
 
 #métodos
