@@ -4,24 +4,6 @@ from .models import Libro, Autor, Genero, modeloGuardar
 from .forms import InicioSesion
 # Create your views here.
 
-def libro(request):
- libro = Libro.objects.order_by('isbn')
- output = ', '.join([l.isbn for l in libro]) +  ', '.join([l.titulo for l in libro])
- return HttpResponse(output)
-
-def autor(request):
-    autor = Autor.objects.order_by('autorId')
-    output = ', '.join([a.autorId for a in autor])
-    return HttpResponse(output)
-
-def index(request):
-    nombre = 'Maren'
-    context = {
-        'login': True,
-        'nombre': nombre
-    }
-    return render(request, 'index.html',context)
-
 def loginform(request):
  form = InicioSesion()
  return render(
@@ -44,6 +26,20 @@ def get_datos(request):
     form = InicioSesion()
  # Renderizar la plantilla con el formulario (con los datos anteriores o vacío)
  return render(request, 'forms.html', {'form': form})
+
+
+def index(request):
+    return render(request, 'index.html')
+
+def libros(request):
+    return render(request, 'products.html')
+
+def contacto(request):
+    return render(request, 'contact.html')
+
+def login(request):
+    return render(request, 'about.html')
+
 
 
 #CAPTURAR ERORRES
