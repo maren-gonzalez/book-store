@@ -1,15 +1,15 @@
-{% load static %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title>Watercolor | Contact</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- CSS -->
-<link rel="stylesheet" href="/static/img/style.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="/static/img/spring.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/css/spring.css" type="text/css" media="screen" />
 <!--[if IE 6]>
-<link rel="stylesheet" type="text/css" media="screen" href="css/ie-hacks.css" />
-<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/ie-hacks.css" />
+<script type="text/javascript" src="/static/js/DD_belatedPNG.js"></script>
 <script>/* EXAMPLE */ DD_belatedPNG.fix('*');</script>
 <![endif]-->
 <!-- ENDS CSS -->
@@ -21,7 +21,7 @@
 <script type="text/javascript" src="/static/js/custom.js"></script>
 <!-- ENDS JS -->
 <!-- superfish -->
-<link rel="stylesheet" type="text/css" media="screen" href="/static/img/superfish-custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/superfish-custom.css" />
 <script type="text/javascript" src="/static/js/superfish-1.4.8/js/hoverIntent.js"></script>
 <script type="text/javascript" src="/static/js/superfish-1.4.8/js/superfish.js"></script>
 <!-- ENDS superfish -->
@@ -36,8 +36,8 @@
 <div id="wrapper">
   <!-- navigation -->
   <ul id="nav" class="sf-menu">
-    <li class="custom"><a href="{% url 'contact' %}">CONTACT</a></li>
-    <li class="custom"><a href="{% url 'gallery' %}">GALERIA</a></li>
+    <li class="custom"><a href="{% url 'contact' %}">CONTACTO</a></li>
+    <li class="custom"><a href="{% url 'gallery' %}">GALLERIA</a></li>
     <li class="custom">ABOUT
       <ul>
         <li><a href="{% url 'libros' %}">Libros</a></li>
@@ -45,31 +45,22 @@
         <li><a href="{% url 'genero' %}">Genero</a></li>
       </ul>
     </li>
+  </ul>
   <!-- ENDS navigation -->
   <!-- HEADER -->
-  <div id="header"> <a href="{% url 'index' %}"><img src="/static/img/logo.png" alt="" id="logo" /></a> <img src="/static/img/nav-arrow.png" alt="" id="arrow" class="arrow-contact" />
-    <form action="#" method="post" id="search">
-      <p>
-        <input type="text" onfocus="defaultInput(this)" onblur="clearInput(this)" name="keyword" id="keyword" value="Search..." />
-      </p>
-      <p>
-        <input type="submit" id="go" value="" />
-      </p>
-      <div class="clear"></div>
-    </form>
-  </div>
+  <div id="header"> <a href="{% url 'index' %}"><img src="/static/img/logo.png" alt="" id="logo" /></a> <img src="/static/img/nav-arrow.png" alt="" id="arrow" class="arrow-home" /></div>
   <!-- ENDS HEADER -->
   <!-- MAIN -->
   <div id="main">
-    <p class="section-title"><span class="title custom">Contact Us</span><span class="desc">Send us a message.</span></p>
+    <p class="section-title"><span class="title custom">Contacta con nosotros</span></p>
     <!-- left-content -->
     <div class="contact-left">
-      <h5 class="custom">Use the form below to send us your comments</h5>
+      <h5 class="custom">Utiliza este formulario para dejar tus comentarios</h5>
       <!-- form -->
       <form id="formMail" action="#" method="post">
         <fieldset>
           <p>
-            <label>NAME:</label>
+            <label>NOMBRE:</label>
             <input name="name"  id="name" type="text" />
           </p>
           <p>
@@ -81,7 +72,7 @@
             <input name="web"  id="web" type="text" />
           </p>
           <p>
-            <label>COMMENTS:</label>
+            <label>COMENTARIOS:</label>
             <textarea  name="comments"  id="comments" rows="5" cols="20"></textarea>
           </p>
           <p>
@@ -90,17 +81,17 @@
         </fieldset>
         <p id="error">Error Message</p>
       </form>
-      <p id="success">Thanks for your comments.</p>
+      <p id="success">Gracias por tus comentarios.</p>
       <!-- ENDS form -->
     </div>
     <!-- ENDS left-content -->
     <!-- right-content -->
     <div class="contact-right">
-      <h4 class="custom">Location map</h4>
+      <h4 class="custom">Ubicacion</h4>
       <div class="taped-image"><span></span><em></em><img src="/static/img/map.png" alt="" /></div>
       <p>Phone: (555) 1144.1234<br/>
-        Email: <a href="#">contact@watercolor-inc.com</a><br/>
-        2514 Street nevermind, City, ST 1454</p>
+        Email: <a href="#">bookstore@deusto.es</a><br/>
+        Unibertsitate Etorb., 24, 48007 Bilbo, Bizkaia</p>
     </div>
     <!-- ENDS right-content -->
   </div>
@@ -119,44 +110,6 @@
       <li><a href="#"><img src="/static/img/linkedln.png" alt="" /></a></li>
       <li><a href="#"><img src="/static/img/rss.png" alt="" /></a></li>
     </ul>
-    <div class="footer-cols">
-      <div>
-        <ul>
-          <li><a href="#" class="custom">Skins</a></li>
-          <li><a href="#">Spring</a></li>
-          <li><a href="#">Summer</a></li>
-          <li><a href="#">Autumn</a></li>
-          <li><a href="#">Winter</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li><a href="#" class="custom">Gallery</a></li>
-          <li><a href="#">Spring</a></li>
-          <li><a href="#">Summer</a></li>
-          <li><a href="#">Autumn</a></li>
-          <li><a href="#">Winter</a></li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li><a href="#" class="custom">Blog</a></li>
-          <li><a href="#">Spring</a></li>
-          <li><a href="#">Summer</a></li>
-          <li><a href="#">Autumn</a></li>
-          <li><a href="#">Winter</a></li>
-        </ul>
-      </div>
-      <div class="last">
-        <ul>
-          <li><a href="#" class="custom">Text Styles</a></li>
-          <li><a href="#">Spring</a></li>
-          <li><a href="#">Summer</a></li>
-          <li><a href="#">Autumn</a></li>
-          <li><a href="#">Winter</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="footer-bottom">
       <p class="legal">&copy; Copyright 2012 <a href="#">Company Name</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></p>
     </div>
