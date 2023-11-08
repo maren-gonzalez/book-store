@@ -31,15 +31,28 @@ def get_datos(request):
 def index(request):
     return render(request, 'index.html')
 
-def libros(request):
-    return render(request, 'products.html')
-
-def contacto(request):
-    return render(request, 'contact.html')
-
-def login(request):
+def about(request):
     return render(request, 'about.html')
 
+def blog(request):
+    return render(request, 'blog.html')
 
+def contact(request):
+    return render(request, 'contact.html')
+
+def gallery(request):
+    return render(request, 'gallery.html')
+
+def single(request):
+    return render(request, 'single.html')
+
+def libros(request):
+    return render(request, 'libros.html')
+
+def autor(request):
+    return render(request, 'autor.html')
+
+def genero(request):
+    return render(request, 'genero.html')
 
 #CAPTURAR ERORRES
