@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Libro, Autor, Genero, modeloGuardar
+from .models import Libro, Autor, Editorial, modeloGuardar
 from .forms import InicioSesion
 # Create your views here.
 
@@ -52,7 +52,5 @@ def libros(request):
 def autor(request):
     return render(request, 'autor.html')
 
-def genero(request):
-    return render(request, 'genero.html')
-
-#CAPTURAR ERORRES
+def editorial(request):
+    return render(request, 'editorial.html')
