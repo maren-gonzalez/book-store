@@ -2,7 +2,7 @@
 {% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Watercolor | Contact</title>
+<title>Contacto</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- CSS -->
 <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
@@ -37,7 +37,7 @@
   <!-- navigation -->
   <ul id="nav" class="sf-menu">
     <li class="custom"><a href="{% url 'contact' %}">CONTACTO</a></li>
-    <li class="custom"><a href="{% url 'gallery' %}">GALLERIA</a></li>
+    <li class="custom"><a href="{% url 'gallery' %}">GALERIA</a></li>
     <li class="custom">ABOUT
       <ul>
         <li><a href="{% url 'libros' %}">Libros</a></li>
@@ -68,10 +68,6 @@
             <input name="email"  id="email" type="text" />
           </p>
           <p>
-            <label>WEB:</label>
-            <input name="web"  id="web" type="text" />
-          </p>
-          <p>
             <label>COMENTARIOS:</label>
             <textarea  name="comments"  id="comments" rows="5" cols="20"></textarea>
           </p>
@@ -79,7 +75,6 @@
             <input type="button" value="" name="send" id="send" />
           </p>
         </fieldset>
-        <p id="error">Error Message</p>
       </form>
       <p id="success">Gracias por tus comentarios.</p>
       <!-- ENDS form -->
@@ -88,7 +83,7 @@
     <!-- right-content -->
     <div class="contact-right">
       <h4 class="custom">Ubicacion</h4>
-      <div class="taped-image"><span></span><em></em><img src="/static/img/map.png" alt="" /></div>
+      <div class="taped-image"><span></span><em></em><img src="/static/img/ubicacion.png" alt="" /></div>
       <p>Phone: (555) 1144.1234<br/>
         Email: <a href="#">bookstore@deusto.es</a><br/>
         Unibertsitate Etorb., 24, 48007 Bilbo, Bizkaia</p>
