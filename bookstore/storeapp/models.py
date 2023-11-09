@@ -1,5 +1,6 @@
 from django.db import models
 from django.forms import ModelForm
+from django import forms
 
 # Create your models here.
 class Libro(models.Model):
@@ -13,6 +14,14 @@ class Autor(models.Model):
     nombre = models.CharField(max_length=50)
     fechanac = models.DateField()
 
+
 class Editorial(models.Model):
     editorialId = models.IntegerField(primary_key=True)
     editorial = models.CharField(max_length=30)
+
+
+class modeloGuardar(models.Model):
+    email = forms.EmailField(label='Introduce tu email', max_length=20)
+    contra = forms.CharField(label='Introduce tu contraseña',widget=forms.PasswordInput())
+
+#métodos
