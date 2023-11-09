@@ -19,7 +19,6 @@
 <script type="text/javascript" src="/static/js/easing.js"></script>
 <script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="/static/js/filterable.pack.js"></script>
-<script type="text/javascript" src="/static/js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
 <script type="text/javascript" src="/static/js/custom.js"></script>
 <!-- ENDS JS -->
 <!-- superfish -->
@@ -51,7 +50,7 @@ $(document).ready(function () {
       <ul>
         <li><a href="{% url 'libros' %}">Libros</a></li>
         <li><a href="{% url 'autor' %}">Autores</a></li>
-        <li><a href="{% url 'genero' %}">Genero</a></li>
+        <li><a href="{% url 'editorial' %}">Editorial</a></li>
       </ul>
     </li>
   </ul>
@@ -67,40 +66,40 @@ $(document).ready(function () {
       <li><a href="#all">TODO</a></li>
       <li><a href="#libro-gal">Libros</a></li>
       <li><a href="#autor-gal">Autores</a></li>
-      <li><a href="#genero-gal">Generos</a></li>
+      <li><a href="#editorial-gal">Editoriales</a></li>
     </ul>
     <!-- filter -->
     <!-- thumbs -->
     <ul id="portfolio-list" class="gallery">
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/1984.jpg" /></a> <em><a href="/libros.html/#1">1984</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/allen&unwin.png" /></a> <em><a href="/libros.html/#1">Allen & Unwin</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/anagrama.jpg" /></a> <em><a href="/libros.html/#1">Anagrama</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/beatrizoses.jpg" /></a> <em><a href="/libros.html/#1">Beatriz Osés</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/buenospresagios.jpg" /></a> <em><a href="/libros.html/#1">Buenos presagios</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/chrismiller.jpg" /></a> <em><a href="/libros.html/#1">Chris Miller</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/colormagia.jpg" /></a> <em><a href="/libros.html/#1">El color de la Magia</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/debolsillo.png" /></a> <em><a href="/libros.html/#1">Debolsillo</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/edebe.png" /></a> <em><a href="/libros.html/#1">edebé</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/erikvogler.jpg" /></a> <em><a href="/libros.html/#1">Erik Vogler: Los crímenes del Rey Blanco</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/georgeorwell.jpg" /></a> <em><a href="/libros.html/#1">George Orwell</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/guerrachips.jpg" /></a> <em><a href="/libros.html/#1">La guerra de los chips</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/hijadiosaluna.jpg" /></a> <em><a href="/libros.html/#1">La hija de la diosa de la Luna</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/elhobbit.jpg" /></a> <em><a href="/libros.html/#1">El hobbit</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/jrrtolkien.jpg" /></a> <em><a href="/libros.html/#1">J. R. R. Tolkien</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/marianaenriquez.jpg" /></a> <em><a href="/libros.html/#1">Marina Enriquez</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/neilgaiman.jpg" /></a> <em><a href="/libros.html/#1">Neil Gaiman</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/oscarwilde.jpg" /></a> <em><a href="/libros.html/#1">Oscar Wilde</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/fumarcama.jpg" /></a> <em><a href="/libros.html/#1">Los peligros de fumar en la cama</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/peninsula.jpg" /></a> <em><a href="/libros.html/#1">Península</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/rebeliongranja.jpg" /></a> <em><a href="/libros.html/#1">Rebelión en la granja</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/reinodecordelia.jpg" /></a> <em><a href="/libros.html/#1">Reino de Cordelia</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/doriangray.jpg" /></a> <em><a href="/libros.html/#1">El retrato de Dorian Gray</a></em> </li>
-      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/evelynhugo.jpg" /></a> <em><a href="/libros.html/#1">Los siete maridos de Evelyn Hugo</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/suelynntan.jpg" /></a> <em><a href="/libros.html/#1">Sue Lynn Tan</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/taylorjenkins.jpg" /></a> <em><a href="/libros.html/#1">Taylor Jenkins</a></em> </li>
-      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/terrypratchett.jpg" /></a> <em><a href="/libros.html/#1">Terry Pratchett</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/timunmas.png" /></a> <em><a href="/libros.html/#1">Timun Mas</a></em> </li>
-      <li class="genero-gal"> <span></span> <img src="/static/img/galeria/umbriel.png" /></a> <em><a href="/libros.html/#1">Umbriel</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/1984.jpg" /></a> <em><a href="/libros.html/#9788499890944">1984</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/allen&unwin.png" /></a> <em><a href="/editorial.html/#1">Allen & Unwin</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/anagrama.jpg" /></a> <em><a href="/editorial.html/#8">Anagrama</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/beatrizoses.jpg" /></a> <em><a href="/autor.html/#6">Beatriz Osés</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/buenospresagios.jpg" /></a> <em><a href="/libros.html/#9788448006983">Buenos presagios</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/chrismiller.jpg" /></a> <em><a href="/autor.html/#5">Chris Miller</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/colormagia.jpg" /></a> <em><a href="/libros.html/#9788497596794">El color de la Magia</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/debolsillo.png" /></a> <em><a href="/editorial.html/#4">Debolsillo</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/edebe.png" /></a> <em><a href="/editorial.html/#6">edebé</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/erikvogler.jpg" /></a> <em><a href="/libros.html/#9788468312842">Erik Vogler: Los crímenes del Rey Blanco</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/georgeorwell.jpg" /></a> <em><a href="/autor.html/#8">George Orwell</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/guerrachips.jpg" /></a> <em><a href="/libros.html/#9788411001984">La guerra de los chips</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/hijadiosaluna.jpg" /></a> <em><a href="/libros.html/#9788416517862">La hija de la diosa de la Luna</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/elhobbit.jpg" /></a> <em><a href="/libros.html/#9788445000656">El hobbit</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/jrrtolkien.jpg" /></a> <em><a href="/autor.html/#1">J. R. R. Tolkien</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/marianaenriquez.jpg" /></a> <em><a href="/autor.html/#10">Marina Enriquez</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/neilgaiman.jpg" /></a> <em><a href="autor.html/#4">Neil Gaiman</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/oscarwilde.jpg" /></a> <em><a href="/autor.html/#9">Oscar Wilde</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/fumarcama.jpg" /></a> <em><a href="/libros.html/#9788433998248">Los peligros de fumar en la cama</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/peninsula.jpg" /></a> <em><a href="/editorial.html/#5">Península</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/rebeliongranja.jpg" /></a> <em><a href="/libros.html/#9788499890951">Rebelión en la granja</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/reinodecordelia.jpg" /></a> <em><a href="/editorial.html/#7">Reino de Cordelia</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/doriangray.jpg" /></a> <em><a href="/libros.html/#9788416968213">El retrato de Dorian Gray</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/evelynhugo.jpg" /></a> <em><a href="/libros.html/#9788416517275">Los siete maridos de Evelyn Hugo</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/suelynntan.jpg" /></a> <em><a href="/autor.html/#2">Sue Lynn Tan</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/taylorjenkins.jpg" /></a> <em><a href="/autor.html/#7">Taylor Jenkins</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/terrypratchett.jpg" /></a> <em><a href="/autor.html/#3">Terry Pratchett</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/timunmas.png" /></a> <em><a href="/editorial.html/#3">Timun Mas</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/umbriel.png" /></a> <em><a href="/editorial.html/#2">Umbriel</a></em> </li>
     </ul>
     <!-- ENDS thumbs -->
   </div>

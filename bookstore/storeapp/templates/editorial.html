@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/css/spring.css" type="text/css" media="screen" />
+<html>
+    <head>
+        <title>Editoriales</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- JS -->
+<script type="text/javascript" src="/static/js/jquery_1.3.2.js"></script>
+<script type="text/javascript" src="/static/js/jqueryui.js"></script>
+<script type="text/javascript" src="/static/js/easing.js"></script>
+<script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="/static/js/custom.js"></script>
+<!-- ENDS JS -->
+<!-- superfish -->
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/superfish-custom.css" />
+<script type="text/javascript" src="/static/js/superfish-1.4.8/js/hoverIntent.js"></script>
+<script type="text/javascript" src="/static/js/superfish-1.4.8/js/superfish.js"></script>
+<!-- ENDS superfish -->
+<!-- CSS -->
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/static/css/spring.css" type="text/css" media="screen" />
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" media="screen" href="/static/css/ie-hacks.css" />
+<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<script>/* EXAMPLE */ DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!-- ENDS CSS -->
+<!-- Cufon -->
+<script src="/static/js/cufon-yui.js" type="text/javascript"></script>
+<script src="/static/js/bebas_400.font.js" type="text/javascript"></script>
+<script type="text/javascript">Cufon.replace('.custom', { fontFamily: 'bebas', hover: true });</script>
+<!-- /Cufon -->
+    </head>
+    <body>
+        <header>
+            <ul id="nav" class="sf-menu">
+                <li class="custom"><a href="{% url 'contact' %}">CONTACTO</a></li>
+                <li class="custom"><a href="{% url 'gallery' %}">GALERIA</a></li>
+                <li class="custom">ABOUT
+                    <ul>
+                      <li><a href="{% url 'libros' %}">Libros</a></li>
+                      <li><a href="{% url 'autor' %}">Autores</a></li>
+                      <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                    </ul>
+                  </li>
+              </ul>
+              <div id="header"> <a href="{% url 'index' %}"><img src="/static/img/logo.png" alt="" id="logo" /></a> <img src="/static/img/nav-arrow.png" alt="" id="arrow" class="arrow-home" /></div>
+        <main>
+            <aside>
+                <form>
+                    <h2 id="1">Allen & Unwin</h2>
+                    <article>
+                        <img src="/static/img/editoriales/allen&unwin.png" alt="allenunwin">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Allen & Unwin</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>1976</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788445000656">El hobbit</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="2">Umbriel</h2>
+                    <article>
+                        <img src="/static/img/editoriales/umbriel.png" alt="umbriel">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Umbriel</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>2003</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788416517862">La hija de la diosa de la Luna</a>, <a href="/libros.html/#9788416517275">Los siete maridos de Evelyn Hugo</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="3">Timun Mas</h2>
+                    <article>
+                        <img src="/static/img/editoriales/timunmas.png" alt="timunmas">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Timun mas</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>2002</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788448006983">Buenos presagios</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="4">Debolsillo</h2>
+                    <article>
+                        <img src="/static/img/editoriales/debolsillo.png" alt="debolsillo" width="300" height="250">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Debolsillo</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>2000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788497596794">El color de la Magia</a>, <a href="/libros.html/#9788499890951">Rebelión en la granja</a>, <a href="/libros.html/#9788499890944">1984</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="5">Península</h2>
+                    <article>
+                        <img src="/static/img/editoriales/peninsula.jpg" alt="peninsula">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Península</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>1964</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788411001984">La guerra de los chips</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="6">edebé</h2>
+                    <article>
+                        <img src="/static/img/editoriales/edebe.png" alt="edebe">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>edebé</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>1888</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788468312842">Erik Vogler: Los crímenes del Rey Blanco</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="7">Reino de Cordelia</h2>
+                    <article>
+                        <img src="/static/img/editoriales/reinodecordelia.jpg" alt="cordelia"  width="200" height="200">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Reino de Cordelia</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>1904</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788416968213">El retrato de Dorian Gray</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                    <h2 id="8">Anagrama</h2>
+                    <article>
+                        <img src="/static/img/editoriales/anagrama.jpeg" alt="anagrama">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>Anagarma</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>1969</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td><a href="/libros.html/#9788433998248">Los peligros de fumar en la cama</a></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </aside>
+        </main>
+<!-- FOOTER -->
+        <div id="footer">
+    <div id="footer-wrapper">
+      <ul id="follow">
+        <li>
+          <p>Follow us: </p>
+        </li>
+        <li><a href="#"><img src="/static/img/twitter.png" alt="" /></a></li>
+        <li><a href="#"><img src="/static/img/facebook.png" alt="" /></a></li>
+        <li><a href="#"><img src="/static/img/linkedln.png" alt="" /></a></li>
+        <li><a href="#"><img src="/static/img/rss.png" alt="" /></a></li>
+      </ul>
+      <div class="footer-bottom">
+        <p class="legal">&copy; Copyright 2012 <a href="#">Company Name</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></p>
+      </div>
+    </div>
+        </div>
+  <!-- ENDS FOOTER -->
+  <!-- start cufon -->
+        <script type="text/javascript">Cufon.now();</script>
+  <!-- ENDS start cufon -->
+    </body>
+</html>
