@@ -2,6 +2,12 @@
 
 @import url('reset.css');
 
+fieldset{
+	margin-bottom: 1em;
+	border: 5px solid #666;
+	border-right: 5px solid #666;
+	border-bottom: 5px solid #666;
+}
 
 .content {
     background-color: pink;
