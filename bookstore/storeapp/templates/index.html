@@ -1,111 +1,113 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<title>Bookstore</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- JS -->
-<script type="text/javascript" src="/static/js/jquery_1.3.2.js"></script>
-<script type="text/javascript" src="/static/js/jqueryui.js"></script>
-<script type="text/javascript" src="/static/js/easing.js"></script>
-<script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
-<script type="text/javascript" src="/static/js/custom.js"></script>
-<!-- ENDS JS -->
-<!-- superfish -->
-<link rel="stylesheet" type="text/css" media="screen" href="/static/css/superfish-custom.css" />
-<script type="text/javascript" src="/static/js/superfish-1.4.8/js/hoverIntent.js"></script>
-<script type="text/javascript" src="/static/js/superfish-1.4.8/js/superfish.js"></script>
-<!-- ENDS superfish -->
-<!-- CSS -->
-<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="/static/css/spring.css" type="text/css" media="screen" />
-<!--[if IE 6]>
-<link rel="stylesheet" type="text/css" media="screen" href="/static/css/ie-hacks.css" />
-<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
-<script>/* EXAMPLE */ DD_belatedPNG.fix('*');</script>
-<![endif]-->
-<!-- ENDS CSS -->
-<!-- Cufon -->
-<script src="/static/js/cufon-yui.js" type="text/javascript"></script>
-<script src="/static/js/bebas_400.font.js" type="text/javascript"></script>
-<script type="text/javascript">Cufon.replace('.custom', { fontFamily: 'bebas', hover: true });</script>
-<!-- /Cufon -->
-</head>
-<body>
-<!-- WRAPPER -->
-<div id="wrapper">
-  <!-- navigation -->
-  <ul id="nav" class="sf-menu">
-    <li class="custom"><a href="{% url 'contact' %}">CONTACTO</a></li>
-    <li class="custom"><a href="{% url 'gallery' %}">GALERIA</a></li>
-    <li class="custom">ABOUT
-      <ul>
-        <li><a href="{% url 'libros' %}">Libros</a></li>
-        <li><a href="{% url 'autor' %}">Autores</a></li>
-        <li><a href="{% url 'editorial' %}">Editorial</a></li>
-      </ul>
-    </li>
-  </ul>
-  <!-- ENDS navigation -->
-  <!-- HEADER -->
-  <div id="header"> <a href="{% url 'index' %}"><img src="/static/img/logo.png" alt="" id="logo" /></a> <img src="/static/img/nav-arrow.png" alt="" id="arrow" class="arrow-home" /></div>
-  <!-- ENDS HEADER -->
-  <!-- MAIN -->
-  <div id="main">
-    <!-- slideshow -->
-    <div id="slideshow">
-      <ul id="slides">
-        <li><img src="/static/slides/1.png" alt="" /></li>
-        <li><img src="/static/slides/2.jpg" alt="" /></li>
-        <li><img src="/static/slides/3.jpg" alt="" /></li>
-      </ul>
-      <span></span> <a href="#"><img src="/static/img/prev-slide.png" alt="" id="prev" /></a> <a href="#"><img src="/static/img/next-slide.png" alt="" id="next" /></a> </div>
-    <!-- ENDS slideshow -->
-    <!-- blocks -->
-    <div class="holder">
-      <div class="block">
-        <div class="thumb-holder"> <a href="/gallery.html/#libro-gal"><img src="/static/img/entrada/librosheader.jpg" alt="" class="thumb" /> </a> </div>
-        <h2 class="custom">NUEVAS LLEGADAS</h2>
-        <h5 class="custom color2">NOVELAS</h5>
-        <p class="thumb-text">Colección de los mejores libros del momento, todos juntos en un mismo lugar.</p>
+   <head>
+      <title>Bookstore</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <!-- JS -->
+      <script type="text/javascript" src="/static/js/jquery_1.3.2.js"></script>
+      <script type="text/javascript" src="/static/js/jqueryui.js"></script>
+      <script type="text/javascript" src="/static/js/easing.js"></script>
+      <script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
+      <script type="text/javascript" src="/static/js/custom.js"></script>
+      <!-- ENDS JS -->
+      <!-- superfish -->
+      <link rel="stylesheet" type="text/css" media="screen" href="/static/css/superfish-custom.css" />
+      <script type="text/javascript" src="/static/js/superfish-1.4.8/js/hoverIntent.js"></script>
+      <script type="text/javascript" src="/static/js/superfish-1.4.8/js/superfish.js"></script>
+      <!-- ENDS superfish -->
+      <!-- CSS -->
+      <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="/static/css/spring.css" type="text/css" media="screen" />
+      <!--[if IE 6]>
+      <link rel="stylesheet" type="text/css" media="screen" href="/static/css/ie-hacks.css" />
+      <script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+      <script>/* EXAMPLE */ DD_belatedPNG.fix('*');</script>
+      <![endif]-->
+      <!-- ENDS CSS -->
+      <!-- Cufon -->
+      <script src="/static/js/cufon-yui.js" type="text/javascript"></script>
+      <script src="/static/js/bebas_400.font.js" type="text/javascript"></script>
+      <script type="text/javascript">Cufon.replace('.custom', { fontFamily: 'bebas', hover: true });</script>
+      <!-- /Cufon -->
+   </head>
+   <body>
+      <!-- WRAPPER -->
+      <div id="wrapper">
+         <!-- navigation -->
+         <ul id="nav" class="sf-menu">
+            <li class="custom"><a href="{% url 'contact' %}">CONTACTO</a></li>
+            <li class="custom"><a href="{% url 'gallery' %}">GALERIA</a></li>
+            <li class="custom">
+               ABOUT
+               <ul>
+                  <li><a href="{% url 'libros' %}">Libros</a></li>
+                  <li><a href="{% url 'autor' %}">Autores</a></li>
+                  <li><a href="{% url 'editorial' %}">Editorial</a></li>
+               </ul>
+            </li>
+         </ul>
+         <!-- ENDS navigation -->
+         <!-- HEADER -->
+         <div id="header"> <a href="{% url 'index' %}"><img src="/static/img/logo.png" alt="" id="logo" /></a> <img src="/static/img/nav-arrow.png" alt="" id="arrow" class="arrow-home" /></div>
+         <!-- ENDS HEADER -->
+         <!-- MAIN -->
+         <div id="main">
+            <!-- slideshow -->
+            <div id="slideshow">
+               <ul id="slides">
+                  <li><img src="/static/slides/1.png" alt="" /></li>
+                  <li><img src="/static/slides/2.jpg" alt="" /></li>
+                  <li><img src="/static/slides/3.jpg" alt="" /></li>
+               </ul>
+               <span></span> <a href="#"><img src="/static/img/prev-slide.png" alt="" id="prev" /></a> <a href="#"><img src="/static/img/next-slide.png" alt="" id="next" /></a> 
+            </div>
+            <!-- ENDS slideshow -->
+            <!-- blocks -->
+            <div class="holder">
+               <div class="block">
+                  <div class="thumb-holder"> <a href="/gallery.html/#libro-gal"><img src="/static/img/entrada/librosheader.jpg" alt="" class="thumb" /> </a> </div>
+                  <h2 class="custom">NUEVAS LLEGADAS</h2>
+                  <h5 class="custom color2">NOVELAS</h5>
+                  <p class="thumb-text">Colección de los mejores libros del momento, todos juntos en un mismo lugar.</p>
+               </div>
+               <div class="block">
+                  <div class="thumb-holder"> <a href="/gallery.html/#autor-gal"><img src="/static/img/entrada/escritoresheader.jpg" alt="" class="thumb" /> </a> </div>
+                  <h2 class="custom">SOBRE LOS AUTORES</h2>
+                  <h5 class="custom color2">DESCUBRE LAS OBRAS</h5>
+                  <p class="thumb-text">Conoce más sobre tus autores favoritos, además de conseguir un listado de todas sus obras disponibles</p>
+               </div>
+               <div class="block last">
+                  <div class="thumb-holder"> <a href="/gallery.html/#editorial-gal"><img src="/static/img/entrada/editorialheader.jpg" alt="" class="thumb" /> </a> </div>
+                  <h2 class="custom">EDITORIALES</h2>
+                  <h5 class="custom color2">INFORMATE</h5>
+                  <p class="thumb-text">Proporcionamos una recopilación de todas nuestras obras agrupadas por su editorial, para ayudarte a encontrar tu nuevo libro favorito.</p>
+               </div>
+            </div>
+            <!-- ENDS blocks -->
+         </div>
+         <!-- ENDS MAIN -->
       </div>
-      <div class="block">
-        <div class="thumb-holder"> <a href="/gallery.html/#autor-gal"><img src="/static/img/entrada/escritoresheader.jpg" alt="" class="thumb" /> </a> </div>
-        <h2 class="custom">SOBRE LOS AUTORES</h2>
-        <h5 class="custom color2">DESCUBRE LAS OBRAS</h5>
-        <p class="thumb-text">Conoce más sobre tus autores favoritos, además de conseguir un listado de todas sus obras disponibles</p>
+      <!-- ENDS WRAPPER -->
+      <!-- FOOTER -->
+      <div id="footer">
+         <div id="footer-wrapper">
+            <ul id="follow">
+               <li>
+                  <p>Follow us: </p>
+               </li>
+               <li><a href="#"><img src="/static/img/twitter.png" alt="" /></a></li>
+               <li><a href="#"><img src="/static/img/facebook.png" alt="" /></a></li>
+               <li><a href="#"><img src="/static/img/linkedln.png" alt="" /></a></li>
+               <li><a href="#"><img src="/static/img/rss.png" alt="" /></a></li>
+            </ul>
+            <div class="footer-bottom">
+               <p class="legal">&copy; Copyright 2012 <a href="#">Company Name</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></p>
+            </div>
+         </div>
       </div>
-      <div class="block last">
-        <div class="thumb-holder"> <a href="/gallery.html/#editorial-gal"><img src="/static/img/entrada/editorialheader.jpg" alt="" class="thumb" /> </a> </div>
-        <h2 class="custom">EDITORIALES</h2>
-        <h5 class="custom color2">INFORMATE</h5>
-        <p class="thumb-text">Proporcionamos una recopilación de todas nuestras obras agrupadas por su editorial, para ayudarte a encontrar tu nuevo libro favorito.</p>
-      </div>
-    </div>
-    <!-- ENDS blocks -->
-  </div>
-  <!-- ENDS MAIN -->
-</div>
-<!-- ENDS WRAPPER -->
-<!-- FOOTER -->
-<div id="footer">
-  <div id="footer-wrapper">
-    <ul id="follow">
-      <li>
-        <p>Follow us: </p>
-      </li>
-      <li><a href="#"><img src="/static/img/twitter.png" alt="" /></a></li>
-      <li><a href="#"><img src="/static/img/facebook.png" alt="" /></a></li>
-      <li><a href="#"><img src="/static/img/linkedln.png" alt="" /></a></li>
-      <li><a href="#"><img src="/static/img/rss.png" alt="" /></a></li>
-    </ul>
-    <div class="footer-bottom">
-      <p class="legal">&copy; Copyright 2012 <a href="#">Company Name</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></p>
-    </div>
-  </div>
-</div>
-<!-- ENDS FOOTER -->
-<!-- start cufon -->
-<script type="text/javascript">Cufon.now();</script>
-<!-- ENDS start cufon -->
-</body>
+      <!-- ENDS FOOTER -->
+      <!-- start cufon -->
+      <script type="text/javascript">Cufon.now();</script>
+      <!-- ENDS start cufon -->
+   </body>
 </html>
