@@ -5,7 +5,7 @@ from django.forms import ModelForm
 class Libro(models.Model):
     isbn = models.CharField(max_length=13, primary_key=True)
     titulo = models.CharField(max_length=50)
-    autor = models.ManyToManyField('Autor', on_delete=models.CASCADE, default = '')
+    autor = models.ManyToManyField('Autor', default = '')
     editorial = models.ForeignKey('Editorial', on_delete=models.CASCADE, default = '')
 
 class Autor(models.Model):
