@@ -82,6 +82,19 @@
                   <h5 class="custom color2">INFORMATE</h5>
                   <p class="thumb-text">Proporcionamos una recopilación de todas nuestras obras agrupadas por su editorial, para ayudarte a encontrar tu nuevo libro favorito.</p>
                </div>
+               <div>
+                  <h1 class="custom">NUEVAS LLEGADAS</h1>
+                  {% if libros_aleatorios %}
+                     {% for libro in libros_aleatorios %}
+                        <div class="block last">
+                              <div class="thumb-holder"><img src="/static/img/entrada/editorialheader.jpg" alt="" class="thumb" /></div>
+                              <h5 class="custom color2">{{ libro.titulo }}</h5>
+                        </div>
+                     {% endfor %}
+                  {% else %}
+                        <p>No hay llegadas recientes.</p>
+                  {% endif %}
+               </div>
             </div>
             <!-- ENDS blocks -->
          </div>
