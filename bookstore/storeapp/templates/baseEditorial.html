@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+
+{% block titulo %} Editorial {% endblock %}
+
+{% block contenido %}
+
+<h2>Datos de la editorial</h2>
+
+<form>
+    <h2>{{ editorial.editorial}}</h2>
+    <article>
+       {%load static%}
+       <img src={% static 'img/editoriales/peninsula.jpg' %} alt="hobbit" width="200" height="300">
+    </article>
+    <fieldset>
+       <legend><strong> {{ editorial.editorial}}  </strong></legend>
+       <table>
+        <tr>
+            <td><strong>Editorial:</strong></td>
+            <td> {{ editorial.editorial}} </td>
+         </tr>
+       </table>
+    </fieldset>
+ <form>
+
+{% endblock %}

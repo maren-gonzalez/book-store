@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+
+{% block titulo %} Detalles del libro {% endblock %}
+
+{% block contenido %}
+
+<h2>Datos del libro</h2>
+{%if libro%}
+<form>
+    <h2>{{ libro.titulo}}</h2>
+    <article>
+       {%load static%}
+       <img src= "{% static libro.foto.titulo%}" alt= "{{libro.foto.titulo}}"width="200" height="300">
+    </article>
+    <fieldset>
+       <legend><strong> {{ libro.titulo}}  </strong></legend>
+       <table>
+          <tr>
+             <td><strong>Escritor:</strong></td>
+             <td> <ul>
+               {% for autor in libro.autor.all %}
+                   <li>{{ autor.nombre }}</li>
+               {% endfor %}
+           </ul></td>
+          </tr>
+          <tr>
+             <td><strong>Editorial:</strong></td>
+             <td> {{ libro.editorial}} </td>
+          </tr>
+          <tr>
+             <td><strong>Año de edición:</strong></td>
+             <td>{{libro.edicion}}</td>
+          </tr>
+          <tr>
+             <td><strong>ISBN:</strong></td>
+             <td> {{libro.isbn}} </td>
+          </tr>
+          <tr>
+             <td><strong>Páginas:</strong></td>
+             <td>{{libro.pag}}</td>
+          </tr>
+       </table>
+       <p><strong>Descripción:</strong></p>
+       <p>{{libro.desc}}</p>
+    </fieldset>
+ <form>
+{% endif %}
+{% endblock %}

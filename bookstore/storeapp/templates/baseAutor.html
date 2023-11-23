@@ -1,0 +1,25 @@
+{% extends "base.html"%}
+
+{% block titulo %} Autor {% endblock %}
+
+{% block contenido %}
+
+<h2>Datos del autor</h2>
+
+<form>
+    <h2>{{autor.nombre}}</h2>
+    <article>
+       {%load static%}
+       <img src={% static 'img/autores/chrismiller.jpg' %} alt="hobbit" width="200" height="300">
+    </article>
+    <fieldset>
+       <table>
+        <tr>
+            <td><strong>Nacimiento:</strong></td>
+            <td> {{ autor.autorId}} </td>
+         </tr>
+       </table>
+    </fieldset>
+ <form>
+
+{% endblock %}
