@@ -11,7 +11,7 @@ class Libro(models.Model):
     autores = models.ManyToManyField('Autor', default = '')
     editorial = models.ForeignKey('Editorial', on_delete=models.CASCADE, default = '')
     foto = models.ImageField(upload_to='img',blank=True,null=True,verbose_name='Image')
-    
+
 class Autor(models.Model):
     autorId = models.IntegerField(primary_key=True, default=0)
     nombre = models.CharField(max_length=50)

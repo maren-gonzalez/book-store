@@ -2,18 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Libro, Autor, Editorial
 from django.shortcuts import get_object_or_404, get_list_or_404
+import random
+
 # Create your views here.
 
-
-
 def index(request):
-    return render(request, 'base.html')
-
-def about(request):
-    return render(request, 'about.html')
-
-def blog(request):
-    return render(request, 'blog.html')
+    libros_aleatorios = Libro.objects.all()
+    return render(request, 'index.html', {'libros_aleatorios': libros_aleatorios[:3]})
 
 def contact(request):
     return render(request, 'contact.html')
@@ -21,11 +16,7 @@ def contact(request):
 def gallery(request):
     return render(request, 'gallery.html')
 
-def single(request):
-    return render(request, 'single.html')
-
 def libros(request):
-
     return render(request, 'libros.html')
 
 def autor(request):
@@ -48,4 +39,3 @@ def autorDetalle(request, autorId):
     autor = get_object_or_404(Autor, pk=autorId)
     context = {'autor': autor}
     return render(request, "baseAutor.html", context)
-
