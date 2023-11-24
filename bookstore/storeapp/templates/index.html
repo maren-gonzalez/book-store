@@ -84,10 +84,11 @@
                </div>
                <div>
                   <h1 class="custom">NUEVAS LLEGADAS</h1>
-                  {% if libros_aleatorios %}
-                     {% for libro in libros_aleatorios %}
+                  {% if primeros_libros %}
+                     {% for libro in primeros_libros %}
                         <div class="block last">
-                              <div class="thumb-holder"><img src="/static/img/entrada/editorialheader.jpg" alt="" class="thumb" /></div>
+                              {% load static %}
+                                 <div class="thumb-holder"><img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}" class="thumb" width="301" height="116"/></div>
                               <h5 class="custom color2">{{ libro.titulo }}</h5>
                         </div>
                      {% endfor %}
