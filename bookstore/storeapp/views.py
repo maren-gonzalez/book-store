@@ -7,8 +7,8 @@ import random
 # Create your views here.
 
 def index(request):
-    libros_aleatorios = Libro.objects.all()
-    return render(request, 'index.html', {'libros_aleatorios': libros_aleatorios[:3]})
+    primeros_libros = Libro.objects.all()
+    return render(request, 'index.html', {'primeros_libros': primeros_libros[:3]})
 
 def contact(request):
     return render(request, 'contact.html')
