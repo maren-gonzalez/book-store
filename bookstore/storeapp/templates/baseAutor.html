@@ -1,10 +1,10 @@
 {% extends "base.html"%}
 
-{% block titulo %} Autor {% endblock %}
+{% block titulo %} Detalles de {{autor.nombre}} {% endblock %}
 
 {% block contenido %}
 
-<h2>Datos del autor</h2>
+<h1>Datos del autor</h1>
 
 <form>
     <h2>{{autor.nombre}}</h2>
@@ -18,9 +18,11 @@
             <td><strong>Nacimiento:</strong></td>
             <td> {{ autor.fechanac}} </td>
          </tr>
+         <tr>
+            <td><strong>Descripcion:</strong></td>
+            <td> {{ autor.desc}} </td>
+         </tr>
        </table>
-       <p><strong>Descripción:</strong></p>
-       <p>{{autor.desc}}</p>
     </fieldset>
  <form>
 

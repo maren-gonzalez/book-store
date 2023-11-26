@@ -1,131 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-   <head>
-      <title>Galeria</title>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <!-- CSS -->
-      <link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen" />
-      <link rel="stylesheet" href="/static/css/spring.css" type="text/css" media="screen" />
-      <!--[if IE 6]>
-      <link rel="stylesheet" type="text/css" media="screen" href="css/ie-hacks.css" />
-      <script type="text/javascript" src="js/DD_belatedPNG.js"></script>
-      <script>/* EXAMPLE */ DD_belatedPNG.fix('*');</script>
-      <![endif]-->
-      <!-- ENDS CSS -->
-      <!-- JS -->
-      <script type="text/javascript" src="/static/js/jquery_1.3.2.js"></script>
-      <script type="text/javascript" src="/static/js/jqueryui.js"></script>
-      <script type="text/javascript" src="/static/js/easing.js"></script>
-      <script type="text/javascript" src="/static/js/jquery.cycle.all.js"></script>
-      <script type="text/javascript" src="/static/js/filterable.pack.js"></script>
-      <script type="text/javascript" src="/static/js/custom.js"></script>
-      <!-- ENDS JS -->
-      <!-- superfish -->
-      <link rel="stylesheet" type="text/css" media="screen" href="/static/css/superfish-custom.css" />
-      <script type="text/javascript" src="/static/js/superfish-1.4.8/js/hoverIntent.js"></script>
-      <script type="text/javascript" src="/static/js/superfish-1.4.8/js/superfish.js"></script>
-      <!-- ENDS superfish -->
-      <!-- Cufon -->
-      <script src="/static/js/cufon-yui.js" type="text/javascript"></script>
-      <script src="/static/js/bebas_400.font.js" type="text/javascript"></script>
-      <script type="text/javascript">Cufon.replace('.custom', { fontFamily: 'bebas', hover: true });</script>
-      <!-- /Cufon -->
-      <!-- Prettyphotos -->
-      <script type="text/javascript" charset="utf-8">
-         $(document).ready(function () {
-             $("a[rel^='prettyPhoto']").prettyPhoto();
-         });
-      </script>
-      <!-- ENDS  Prettyphotos -->
-   </head>
-   <body>
-      <!-- WRAPPER -->
-      <div id="wrapper">
-         <!-- navigation -->
-         <ul id="nav" class="sf-menu">
-            <li class="custom"><a href="{% url 'contact' %}">CONTACTO</a></li>
-            <li class="custom"><a href="{% url 'gallery' %}">GALERIA</a></li>
-            <li class="custom">
-               ABOUT
-               <ul>
-                  <li><a href="{% url 'libros' %}">Libros</a></li>
-                  <li><a href="{% url 'autor' %}">Autores</a></li>
-                  <li><a href="{% url 'editorial' %}">Editorial</a></li>
-               </ul>
-            </li>
-         </ul>
-         <!-- ENDS navigation -->
-         <!-- HEADER -->
-         <div id="header"> <a href="{% url 'index' %}"><img src="/static/img/logo.png" alt="" id="logo" /></a> <img src="/static/img/nav-arrow.png" alt="" id="arrow" class="arrow-gallery" /></div>
-         <!-- ENDS HEADER -->
-         <!-- MAIN -->
-         <div id="main">
-            <p class="section-title"><span class="title custom">GALERIA</span></p>
-            <ul id="portfolio-filter">
-               <li>FILTRO: </li>
-               <li><a href="#all">TODO</a></li>
-               <li><a href="#libro-gal">Libros</a></li>
-               <li><a href="#autor-gal">Autores</a></li>
-               <li><a href="#editorial-gal">Editoriales</a></li>
-            </ul>
-            <!-- filter -->
-            <!-- thumbs -->
-            <ul id="portfolio-list" class="gallery">
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/1984.jpg" alt="1984"/> <em><a href="/libros.html/#9788499890944">1984</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/allen&unwin.png" alt="allen"/> <em><a href="/editorial.html/#1">Allen & Unwin</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/anagrama.jpg" alt="anagrama"/> <em><a href="/editorial.html/#8">Anagrama</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/beatrizoses.jpg" alt="beatriz"/> <em><a href="/autor.html/#6">Beatriz Osés</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/buenospresagios.jpg" alt="buenospresagios"/> <em><a href="/libros.html/#9788448006983">Buenos presagios</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/chrismiller.jpg" alt="chrismiller"/> <em><a href="/autor.html/#5">Chris Miller</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/colormagia.jpg" alt="colormagia"/> <em><a href="/libros.html/#9788497596794">El color de la Magia</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/debolsillo.png" alt="debolsillo"/> <em><a href="/editorial.html/#4">Debolsillo</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/edebe.png" alt="edebe"/> <em><a href="/editorial.html/#6">edebé</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/erikvogler.jpg" alt="erikvogler"/> <em><a href="/libros.html/#9788468312842">Erik Vogler: Los crímenes del Rey Blanco</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/georgeorwell.jpg" alt="george"/> <em><a href="/autor.html/#8">George Orwell</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/guerrachips.jpg" alt="guerrachips"/> <em><a href="/libros.html/#9788411001984">La guerra de los chips</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/hijadiosaluna.jpg" alt="hijadiosaluna"/> <em><a href="/libros.html/#9788416517862">La hija de la diosa de la Luna</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/elhobbit.jpg" alt="elhobbit"/> <em><a href="/libros.html/#9788445000656">El hobbit</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/jrrtolkien.jpg" alt="jrrtolkien"/> <em><a href="/autor.html/#1">J. R. R. Tolkien</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/marianaenriquez.jpg" alt="marina"/> <em><a href="/autor.html/#10">Marina Enriquez</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/neilgaiman.jpg" alt="neil"/> <em><a href="autor.html/#4">Neil Gaiman</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/oscarwilde.jpg" alt="oscar"/> <em><a href="/autor.html/#9">Oscar Wilde</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/fumarcama.jpg" alt="fumar"/> <em><a href="/libros.html/#9788433998248">Los peligros de fumar en la cama</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/peninsula.jpg" alt="peninsula"/> <em><a href="/editorial.html/#5">Península</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/rebeliongranja.jpg" alt="rebeliongranja"/> <em><a href="/libros.html/#9788499890951">Rebelión en la granja</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/reinodecordelia.jpg" alt="reino"/> <em><a href="/editorial.html/#7">Reino de Cordelia</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/doriangray.jpg" alt="doriangray"/> <em><a href="/libros.html/#9788416968213">El retrato de Dorian Gray</a></em> </li>
-               <li class="libro-gal"> <span></span> <img src="/static/img/galeria/evelynhugo.jpg" alt="evelynhugo"/> <em><a href="/libros.html/#9788416517275">Los siete maridos de Evelyn Hugo</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/suelynntan.jpg" alt="suelynntan"/> <em><a href="/autor.html/#2">Sue Lynn Tan</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/taylorjenkins.jpg" alt="taylor"/> <em><a href="/autor.html/#7">Taylor Jenkins</a></em> </li>
-               <li class="autor-gal"> <span></span> <img src="/static/img/galeria/terrypratchett.jpg" alt="terry"/> <em><a href="/autor.html/#3">Terry Pratchett</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/timunmas.png" alt="timunmas"/> <em><a href="/editorial.html/#3">Timun Mas</a></em> </li>
-               <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/umbriel.png" alt="umbriel"/> <em><a href="/editorial.html/#2">Umbriel</a></em> </li>
-            </ul>
-            <!-- ENDS thumbs -->
-         </div>
-         <!-- ENDS MAIN -->
-      </div>
-      <!-- ENDS WRAPPER -->
-      <!-- FOOTER -->
-      <div id="footer">
-         <div id="footer-wrapper">
-            <ul id="follow">
-               <li>
-                  <p>Follow us: </p>
-               </li>
-               <li><a href="#"><img src="/static/img/twitter.png" alt="" /></a></li>
-               <li><a href="#"><img src="/static/img/facebook.png" alt="" /></a></li>
-               <li><a href="#"><img src="/static/img/linkedln.png" alt="" /></a></li>
-               <li><a href="#"><img src="/static/img/rss.png" alt="" /></a></li>
-            </ul>
-            <div class="footer-bottom">
-               <p class="legal">&copy; Copyright 2012 <a href="#">Company Name</a> All Rights Reserved | Website Template By <a target="_blank" href="http://www.luiszuno.com">luiszuno</a></p>
-            </div>
-         </div>
-      </div>
-      <!-- ENDS FOOTER -->
-      <!-- start cufon -->
-      <script type="text/javascript">Cufon.now();</script>
-      <!-- ENDS start cufon -->
-   </body>
-</html>
+{%extends "base.html"%}
+
+{%block titulo%}Galeria{%endblock%}
+
+{%block contenido%}
+<div id="main">
+   <p class="section-title"><span class="title custom">GALERIA</span></p>
+   <ul id="portfolio-filter">
+      <li>FILTRO: </li>
+      <li><a href="#all">TODO</a></li>
+      <li><a href="#libro-gal">Libros</a></li>
+      <li><a href="#autor-gal">Autores</a></li>
+      <li><a href="#editorial-gal">Editoriales</a></li>
+   </ul>
+   <!-- filter -->
+   <!-- thumbs -->
+   <ul id="portfolio-list" class="gallery">
+      {%load static%}
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/1984.jpg" alt="1984"/> <em><a href="{% url 'libroDetalle' '9788499890944' %}">1984</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/allen&unwin.png" alt="allen"/> <em><a href="{% url 'editorialDetalle' 1 %}">Allen & Unwin</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/anagrama.jpg" alt="anagrama"/> <em><a href="{% url 'editorialDetalle' 8 %}">Anagrama</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/beatrizoses.jpg" alt="beatriz"/> <em><a href="{% url 'autorDetalle' 6 %}">Beatriz Osés</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/buenospresagios.jpg" alt="buenospresagios"/> <em><a href="{% url 'libroDetalle' '9788448006983' %}">Buenos presagios</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/chrismiller.jpg" alt="chrismiller"/> <em><a href="{% url 'autorDetalle' 5 %}">Chris Miller</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/colormagia.jpg" alt="colormagia"/> <em><a href="{% url 'libroDetalle' '9788497596794' %}">El color de la Magia</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/debolsillo.png" alt="debolsillo"/> <em><a href="{% url 'editorialDetalle' 4 %}">Debolsillo</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/edebe.png" alt="edebe"/> <em><a href="{% url 'editorialDetalle' 6 %}">edebé</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/georgeorwell.jpg" alt="george"/> <em><a href="{% url 'autorDetalle' 8 %}">George Orwell</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/guerrachips.jpg" alt="guerrachips"/> <em><a href="{% url 'libroDetalle' '9788411001984' %}">La guerra de los chips</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/hijadiosaluna.jpg" alt="hijadiosaluna"/> <em><a href="{% url 'libroDetalle' '9788416517862' %}">La hija de la diosa de la Luna</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/elhobbit.jpg" alt="elhobbit"/> <em><a href="{% url 'libroDetalle' '9788445000656' %}">El hobbit</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/jrrtolkien.jpg" alt="jrrtolkien"/> <em><a href="{% url 'autorDetalle' 1 %}">J. R. R. Tolkien</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/marianaenriquez.jpg" alt="marina"/> <em><a href="{% url 'autorDetalle' 10 %}">Marina Enriquez</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/neilgaiman.jpg" alt="neil"/> <em><a href="{% url 'autorDetalle' 4 %}">Neil Gaiman</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/oscarwilde.jpg" alt="oscar"/> <em><a href="{% url 'autorDetalle' 9 %}">Oscar Wilde</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/fumarcama.jpg" alt="fumar"/> <em><a href="{% url 'libroDetalle' '9788433998248' %}">Los peligros de fumar en la cama</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/peninsula.jpg" alt="peninsula"/> <em><a href="{% url 'editorialDetalle' 5 %}">Península</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/rebeliongranja.jpg" alt="rebeliongranja"/> <em><a href="{% url 'libroDetalle' '9788499890951' %}">Rebelión en la granja</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/reinodecordelia.jpg" alt="reino"/> <em><a href="{% url 'editorialDetalle' 7 %}">Reino de Cordelia</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/doriangray.jpg" alt="doriangray"/> <em><a href="{% url 'libroDetalle' '9788416968213' %}">El retrato de Dorian Gray</a></em> </li>
+      <li class="libro-gal"> <span></span> <img src="/static/img/galeria/evelynhugo.jpg" alt="evelynhugo"/> <em><a href="{% url 'libroDetalle' '9788416517275' %}">Los siete maridos de Evelyn Hugo</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/suelynntan.jpg" alt="suelynntan"/> <em><a href="{% url 'autorDetalle' 2 %}">Sue Lynn Tan</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/taylorjenkins.jpg" alt="taylor"/> <em><a href="{% url 'autorDetalle' 7 %}">Taylor Jenkins</a></em> </li>
+      <li class="autor-gal"> <span></span> <img src="/static/img/galeria/terrypratchett.jpg" alt="terry"/> <em><a href="{% url 'autorDetalle' 3 %}">Terry Pratchett</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/timunmas.png" alt="timunmas"/> <em><a href="{% url 'editorialDetalle' 3 %}">Timun Mas</a></em> </li>
+      <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/umbriel.png" alt="umbriel"/> <em><a href="{% url 'editorialDetalle' 2 %}">Umbriel</a></em> </li>
+   </ul>
+   <!-- ENDS thumbs -->
+</div>
+{%endblock%}

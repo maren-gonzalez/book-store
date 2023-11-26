@@ -1,19 +1,18 @@
 {% extends "base.html"%}
 
-{% block titulo %} Detalles del libro {% endblock %}
+{% block titulo %} {{libro.titulo}} {% endblock %}
 
 {% block contenido %}
-
-<h2>Datos del libro</h2>
+<h1>Datos del libro</h1>
 {%if libro%}
 <form>
-    <h2>{{ libro.titulo}}</h2>
+    <h2>{{ libro.titulo }}</h2>
     <article>
        {%load static%}
          <img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}"  width="292" height="445"/>
       </article>
     <fieldset>
-       <legend><strong> {{ libro.titulo}}  </strong></legend>
+       <legend><strong> {{ libro.titulo}} </strong></legend>
        <table>
           <tr>
              <td><strong>Escritor:</strong></td>
