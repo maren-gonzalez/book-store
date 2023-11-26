@@ -10,14 +10,13 @@
     <h2>{{ editorial.editorial}}</h2>
     <article>
        {%load static%}
-       <img src={% static 'img/editoriales/peninsula.jpg' %} alt="hobbit" width="200" height="300">
-    </article>
+       <img alt="{{ editorial.editorial }}" src="{% static editorial.foto.url %}"/>
+      </article>
     <fieldset>
-       <legend><strong> {{ editorial.editorial}}  </strong></legend>
        <table>
         <tr>
-            <td><strong>Editorial:</strong></td>
-            <td> {{ editorial.editorial}} </td>
+            <td><strong>Creación:</strong></td>
+            <td> {{ editorial.creacion}} </td>
          </tr>
        </table>
     </fieldset>

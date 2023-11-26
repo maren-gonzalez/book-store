@@ -10,15 +10,17 @@
     <h2>{{autor.nombre}}</h2>
     <article>
        {%load static%}
-       <img src={% static 'img/autores/chrismiller.jpg' %} alt="hobbit" width="200" height="300">
-    </article>
+       <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}"/>
+      </article>
     <fieldset>
        <table>
-        <tr>
+         <tr>
             <td><strong>Nacimiento:</strong></td>
-            <td> {{ autor.autorId}} </td>
+            <td> {{ autor.fechanac}} </td>
          </tr>
        </table>
+       <p><strong>Descripción:</strong></p>
+       <p>{{autor.desc}}</p>
     </fieldset>
  <form>
 

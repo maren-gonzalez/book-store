@@ -10,15 +10,15 @@
     <h2>{{ libro.titulo}}</h2>
     <article>
        {%load static%}
-       <img src= "{% static libro.foto.titulo%}" alt= "{{libro.foto.titulo}}"width="200" height="300">
-    </article>
+         <img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}"  width="292" height="445"/>
+      </article>
     <fieldset>
        <legend><strong> {{ libro.titulo}}  </strong></legend>
        <table>
           <tr>
              <td><strong>Escritor:</strong></td>
              <td> <ul>
-               {% for autor in libro.autor.all %}
+               {% for autor in libro.autores.all %}
                    <li>{{ autor.nombre }}</li>
                {% endfor %}
            </ul></td>
