@@ -19,6 +19,10 @@
             <td> {{ editorial.creacion}} </td>
          </tr>
        </table>
+       <p><strong>Libros:</strong></p>
+      {% for libro in libros_de_la_editorial %}
+         <li>{{ libro.titulo }}</li>
+      {% endfor %}
     </fieldset>
  <form>
 

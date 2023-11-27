@@ -46,7 +46,7 @@
                <div class="block last">
                      {% load static %}
                         <div class="thumb-holder"><img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}" class="thumb" width="301" height="116"/></div>
-                     <h5 class="custom color2">{{ libro.titulo }}</h5>
+                        <a href="{% url 'libroDetalle' libro.isbn %}"><h5 class="custom color2">{{ libro.titulo }}</h5></a>
                </div>
             {% endfor %}
          {% else %}

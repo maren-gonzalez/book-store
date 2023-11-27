@@ -13,16 +13,18 @@
        <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}"/>
       </article>
     <fieldset>
-       <table>
+      <table>
          <tr>
             <td><strong>Nacimiento:</strong></td>
             <td> {{ autor.fechanac}} </td>
          </tr>
-         <tr>
-            <td><strong>Descripcion:</strong></td>
-            <td> {{ autor.desc}} </td>
-         </tr>
-       </table>
+      </table>
+      <p><strong>Libros:</strong></p>
+      {% for libro in libros_del_autor %}
+            <li>{{ libro.titulo }}</li>
+      {% endfor %}
+      <p><strong>Descripcion:</strong></p>
+      <p> {{ autor.desc}} </p>
     </fieldset>
  <form>
 
