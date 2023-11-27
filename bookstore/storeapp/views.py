@@ -8,7 +8,8 @@ import random
 
 def index(request):
     primeros_libros = Libro.objects.all()
-    return render(request, 'index.html', {'primeros_libros': primeros_libros[:3]})
+    listaisbn = [libro.isbn for libro in primeros_libros]
+    return render(request, 'index.html', {'primeros_libros': primeros_libros[:3], 'listaisbn': listaisbn})
 
 def contact(request):
     return render(request, 'contact.html')
@@ -32,10 +33,12 @@ def libroDetalle(request, isbn):
 
 def editorialDetalle(request, editorialId):
     editorial = get_object_or_404(Editorial, pk=editorialId)
-    context = {'editorial': editorial}
+    libros_de_la_editorial = Libro.objects.filter(editorial=editorial)
+    context = {'editorial': editorial, 'libros_de_la_editorial': libros_de_la_editorial}
     return render(request, "baseEditorial.html", context)
 
 def autorDetalle(request, autorId):
     autor = get_object_or_404(Autor, pk=autorId)
-    context = {'autor': autor}
+    libros_del_autor = Libro.objects.filter(autores=autor)
+    context = {'autor': autor, 'libros_del_autor': libros_del_autor}
     return render(request, "baseAutor.html", context)
