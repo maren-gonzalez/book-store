@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Libro, Autor, Editorial
+from .forms import ComentariosForm
 from django.shortcuts import get_object_or_404, get_list_or_404
 import random
 
@@ -12,7 +13,13 @@ def index(request):
     return render(request, 'index.html', {'primeros_libros': primeros_libros[:3], 'listaisbn': listaisbn})
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        form = ComentariosForm(request.POST)
+        if form.is_valid():
+            return render(request, 'contact.html', {'success': True})
+    else:
+        form = ComentariosForm()
+    return render(request, 'contact.html', {'form': form})
 
 def gallery(request):
     return render(request, 'gallery.html')
