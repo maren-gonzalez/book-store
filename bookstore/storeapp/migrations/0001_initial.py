@@ -15,25 +15,36 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Autor',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=False, serialize=False, verbose_name='ID')),
+                ('autorId', models.IntegerField(primary_key=True, default=0)),
                 ('nombre', models.CharField(max_length=50)),
+                ('fechanac', models.DateField(default='1999-01-01')),
+                ('desc', models.TextField(default='')),
+                ('foto', models.ImageField(upload_to='img/autores',blank=True,null=True,verbose_name='Image'))
             ],
         ),
         migrations.CreateModel(
-            name='Genero',
+            name='Editorial',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('genero', models.CharField(max_length=30)),
+                ('id', models.BigAutoField(auto_created=True, primary_key=False, serialize=False, verbose_name='ID')),
+                ('editorialId',  models.IntegerField(primary_key=True, default=0)),
+                ('editorial', models.CharField(max_length=30, default = '')),
+                ('creacion', models.IntegerField(default=0)),
+                ('foto', models.ImageField(upload_to='img/editoriales',blank=True,null=True,verbose_name='Image'))
             ],
         ),
         migrations.CreateModel(
             name='Libro',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('isbn', models.CharField(max_length=13)),
+                ('id', models.BigAutoField(auto_created=True, primary_key=False, serialize=False, verbose_name='ID')),
+                ('isbn', models.CharField(max_length=13, primary_key=True)),
                 ('titulo', models.CharField(max_length=50)),
                 ('autor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='storeapp.autor')),
-                ('genero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='storeapp.genero')),
+                ('genero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='storeapp.editorial')),
+                ('edicion', models.CharField(max_length=50, default='')),
+                ('pag',  models.IntegerField(default=0)),
+                ('desc', models.TextField(default='')),
+                ('foto', models.ImageField(upload_to='img/libros',blank=True,null=True,verbose_name='Image'))
             ],
         ),
     ]
