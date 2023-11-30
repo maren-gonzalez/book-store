@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
 from .models import Libro, Autor, Editorial
 from .forms import ComentariosForm
-from django.shortcuts import get_object_or_404, get_list_or_404
-import random
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
