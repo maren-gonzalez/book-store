@@ -46,5 +46,32 @@
       <li class="editorial-gal"> <span></span> <img src="/static/img/galeria/umbriel.png" alt="umbriel"/> <em><a href="{% url 'editorialDetalle' 2 %}">Umbriel</a></em> </li>
    </ul>
    <!-- ENDS thumbs -->
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <script>
+      $(document).ready(function() {
+         $('a[href="#libro-gal"]').on('click', function(e) {
+              e.preventDefault();
+              $('.gallery li').hide();
+              $('.libro-gal').show();
+          });
+  
+         $('a[href="#autor-gal"]').on('click', function(e) {
+            e.preventDefault();
+            $('.gallery li').hide();
+            $('.autor-gal').show();
+        });
+
+        $('a[href="#editorial-gal"]').on('click', function(e) {
+         e.preventDefault();
+         $('.gallery li').hide();
+         $('.editorial-gal').show();
+     });
+          $('a[href="#all"]').on('click', function(e) {
+              e.preventDefault();
+              $('.gallery li').show();
+          });
+      });
+  </script>
+  
 </div>
 {%endblock%}

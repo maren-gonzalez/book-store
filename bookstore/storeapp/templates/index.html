@@ -21,21 +21,21 @@
       <div class="block">
          {%load static%}
          <div class="thumb-holder"> <img src="/static/img/entrada/librosheader.jpg" alt="" class="thumb" /></div>
-         <h2 class="custom">NUEVAS LLEGADAS</h2>
+         <h2 class="custom"><a href="libros">NUEVAS LLEGADAS</a></h2>
          <h5 class="custom color2">NOVELAS</h5>
          <p class="thumb-text">Colección de los mejores libros del momento, todos juntos en un mismo lugar.</p>
       </div>
       <div class="block">
          {%load static%}
          <div class="thumb-holder"> <img src="/static/img/entrada/escritoresheader.jpg" alt="" class="thumb" /></div>
-         <h2 class="custom">SOBRE LOS AUTORES</h2>
+         <h2 class="custom"><a href="autor">SOBRE LOS AUTORES</a></h2>
          <h5 class="custom color2">DESCUBRE LAS OBRAS</h5>
          <p class="thumb-text">Conoce más sobre tus autores favoritos, además de conseguir un listado de todas sus obras disponibles</p>
       </div>
       <div class="block last">
          {%load static%}
          <div class="thumb-holder"> <img src="/static/img/entrada/editorialheader.jpg" alt="" class="thumb" /></div>
-         <h2 class="custom">EDITORIALES</h2>
+         <h2 class="custom"><a href="editorial">EDITORIALES</a></h2>
          <h5 class="custom color2">INFORMATE</h5>
          <p class="thumb-text">Proporcionamos una recopilación de todas nuestras obras agrupadas por su editorial, para ayudarte a encontrar tu nuevo libro favorito.</p>
       </div>
@@ -54,7 +54,15 @@
          {% endif %}
       </div>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-      <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Echar la vista atrás para intentar reescribir el pasado es absurdo. El tiempo solo corre en una dirección."La Bestia", Carmen Mola</p>&mdash; AMNotify (@AMNotify) <a href="https://twitter.com/LibrosEnCitas/status/1726644767885545554">November 20, 2023</a></blockquote>
+      <blockquote class="twitter-tweet" data-theme="dark">
+         <p vocab="http://schema.org/" resource="#recomendacion" typeof="Review">
+            <!--headline, -->
+            <span property="text">Echar la vista atrás para intentar reescribir el pasado es absurdo. El tiempo solo corre en una dirección."</span>
+            <span property="title">La Bestia</span>
+            ", 
+            <span property="author">Carmen Mola</span>.
+         </p>
+         &mdash; AMNotify (@AMNotify) <a href="https://twitter.com/LibrosEnCitas/status/1726644767885545554">November 20, 2023</a></blockquote>
       </p><p>&nbsp;</p><p>&nbsp;</p>
    </div>
    <!-- ENDS blocks -->
