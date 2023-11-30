@@ -1,231 +1,174 @@
-{%extends "base.html"%}
+{% extends "base.html" %}
 
-{%block titulo%}Autores{%endblock%}
+{% block titulo %}Autores{% endblock %}
 
-{%block contenido%}
-<main>
-    <aside>
-        <form>
-            <h2 id="6">Beatriz Osés</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/beatrizoses.jpg" alt="beatriz" width="300" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Beatriz Osés</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>24 de noviembre de 1972</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788468312842">Erik Vogler: Los crímenes del Rey Blanco</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Beatriz Osés García es una escritora española de literatura infantil y juvenil y profesora de educación secundaria de Lengua castellana y literatura.</p>
-            </fieldset>
-            <br>
-            <h2 id="5">Chris Miller</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/chrismiller.jpg" alt="chris" width="200" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Chris Miller</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788411001984">La guerra de los chips</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Chris Miller es profesor de Historia Internacional en la Fletcher School de la Universidad de Tufts. Ejerce también de adjunto en el American Enterprise Institute y es director de investigación sobre Eurasia del Foreign Policy Research Institute.</p>
-            </fieldset>
-            <br>
-            <h2 id="8">George Orwell</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/georgeorwell.jpg" alt="george" width="200" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>George Orwell</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>25 de junio de 1903</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros escritos:</strong></td>
-                        <td><a href="/libros.html/#9788499890951">Rebelión en la granja</a>, <a href="/libros.html/#9788499890944">1984</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Eric Arthur Blair, conocido por su seudónimo de George Orwell, fue un novelista, periodista, ensayista y crítico británico nacido en la India, autor entre otras obras de las novelas distópicas Rebelión en la granja y 1984.</p>
-                </fieldset>
-            <br>
-            <h2 id="1">J. R. R. Tolkien</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/jrrtolkien.jpg" alt="tolkien" width="200" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>J. R. R. Tolkien</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>3 de enero de 1892</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788445000656">El hobbit</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>John Ronald Reuel Tolkien, a menudo citado como J. R. R. Tolkien o JRRT, fue un escritor, poeta, filólogo, lingüista y profesor universitario británico, nacido en el Estado Libre de Orange. Conocido principalmente por ser el autor de El hobbit y El Señor de los Anillos.</p>
-            </fieldset>
-            <br>
-            <h2 id="10">Marina Enriquez</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/marianaenriquez.jpg" alt="marina" width="300" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Mariana Enríquez</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>1973</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788433998248">Los peligros de fumar en la cama</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Mariana Enríquez es una escritora, periodista y docente argentina, parte del grupo de escritores conocidos como «nueva narrativa argentina».</p>
-            </fieldset>
-            <br>
-            <h2 id="4">Neil Gaiman</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/nielgaiman.jpg" alt="neil" width="200" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Neil Gaiman</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>10 de noviembre de 1960</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788448006983">Buenos presagios</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Neil Richard Gaiman es un autor de ficción, novelas, cómics, novelas gráficas, no ficción, teatro de audio, películas e historietas y escritor británico. Cultiva el género fantástico. Sus obras incluyen la serie de cómics The Sandman y las novelas Stardust, Coraline y El libro del cementerio.</p>
-            </fieldset>
-            <br>
-            <h2 id="9">Oscar Wilde</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/oscarwilde.jpg" alt="oscar" width="200" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Oscar Wilde</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>16 de octubre de 1854</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788416968213">El retrato de Dorian Gray</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Oscar Fingal O'Flahertie Wills Wilde, conocido como Oscar Wilde, fue un escritor, poeta y dramaturgo de origen irlandés. Wilde es considerado uno de los dramaturgos más destacados del Londres victoriano tardío. Además, fue una celebridad de la época debido a su gran y aguzado ingenio.</p>
-            </fieldset>
-            <br>
-            <h2 id="2">Sue Lynn Tan</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/suelynntan.jpg" alt="sue lynn" width="300" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Sue Lynn Tan</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788416517862">La hija de la diosa de la Luna</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>La escritora Sue Lynn Tan nació en Malasia y estudió en Londres y Francia antes de asentarse en Hong Kong junto a su familia. Tan escribe novelas de fantasía inspiradas por los mitos y leyendas que aprendió a amar desde que era muy pequeña</p>
-            </fieldset>
-            <br>
-            <h2 id="7">Taylor Jenkins</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/taylorjenkins.jpg" alt="taylor" width="200" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Taylor Jenkins</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>20 de diciembre de 1983</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libro escrito:</strong></td>
-                        <td><a href="/libros.html/#9788416517275">Los siete maridos de Evelyn Hugo</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Taylor Jenkins Reid es una escritora, productora de televisión y guionista estadounidense. Escribe principalmente romance y sus obras más destacadas son Los siete maridos de Evelyn Hugo y Todos quieren a Daisy Jones.</p>
-            </fieldset>
-            <br>
-            <h2 id="3">Terry Pratchett</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/autores/terrypratchett.jpg" alt="terry" width="250" height="300">
-            </article>
-            <fieldset>
-                <legend><strong><u>Terry Pratchett</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Nacimiento:</strong></td>
-                        <td>28 de abril de 1948</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros escrito:</strong></td>
-                        <td><a href="/libros.html/#9788448006983">Buenos presagios</a>, <a href="/libros.html/#9788497596794">El color de la Magia</a></td>
-                    </tr>
-                </table>
-                <br>
-                <p><strong>Descripción</strong></p>
-                <p>Terence David John "Terry" Pratchett fue un escritor británico de fantasía y ciencia ficción. Sus obras más conocidas corresponden a la serie del Mundodisco. Además, escribió novelas juveniles, relatos cortos y colaboró en la redacción de guiones para las adaptaciones televisivas de sus novelas.</p>
-            </fieldset>
-        </form>
-    </aside>
-</main>
-{%endblock%}
+{% block contenido %}
+    <div id="app">
+        <main>
+            <aside>
+                {% verbatim  %}
+                <div v-for="author in authors" :key="author.id">
+                    <h2>{{ author.nombre }}</h2>
+                    <article>
+                        <img :src="author.foto" :alt="author.alt" width="200" height="300">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>{{ author.nombre }}</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Nacimiento:</strong></td>
+                                <td>{{ author.fechanac }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libro(s) escrito:</strong></td>
+                                <td><span v-for="(book, index) in author.libros" :key="index">
+                                    {{ book.titulo }}
+                                    <span v-if="index !== author.libros.length - 1">, </span>
+                                </span></td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p><strong>Descripción</strong></p>
+                        <p>{{ author.desc }}</p>
+                    </fieldset>
+                    <br>
+                </div>
+                 {% endverbatim %}
+            </aside>
+        </main>
+    </div>
+
+    {%load static%}
+    <script src="/static/js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                authors: [
+                    {
+                        id: 1,
+                        nombre: 'Beatriz Osés',
+                        foto: '/static/img/autores/beatrizoses.jpg',
+                        alt: 'beatriz',
+                        fechanac: '24 de noviembre de 1972',
+                        libros: [
+                            { titulo: 'Erik Vogler: Los crímenes del Rey Blanco' }
+                        ],
+                        desc: 'Beatriz Osés García es una escritora española de literatura infantil y juvenil y profesora de educación secundaria de Lengua castellana y literatura.'
+                    },
+                    {
+                        id: 5,
+                        nombre: 'Chris Miller',
+                        foto: '/static/img/autores/chrismiller.jpg',
+                        alt: 'chris',
+                        fechanac: '-',
+                        libros: [
+                            { titulo: 'La guerra de los chips' }
+                        ],
+                        desc: 'Chris Miller es profesor de Historia Internacional en la Fletcher School de la Universidad de Tufts. Ejerce también de adjunto en el American Enterprise Institute y es director de investigación sobre Eurasia del Foreign Policy Research Institute.'
+                    },
+                    {
+                        id: 8,
+                        nombre: 'George Orwell',
+                        foto: '/static/img/autores/georgeorwell.jpg',
+                        alt: 'george',
+                        fechanac: '25 de junio de 1903',
+                        libros: [
+                            { titulo: 'Rebelión en la granja' },
+                            { titulo: '1984' }
+                        ],
+                        desc: 'Eric Arthur Blair, conocido por su seudónimo de George Orwell, fue un novelista, periodista, ensayista y crítico británico nacido en la India, autor entre otras obras de las novelas distópicas Rebelión en la granja y 1984.'
+                    },
+
+                    {
+                        id: 1,
+                        nombre: 'J. R. R. Tolkien',
+                        foto: '/static/img/autores/jrrtolkien.jpg',
+                        alt: 'tolkien',
+                        fechanac: '3 de enero de 1892',
+                        libros: [
+                            { titulo: 'El hobbit' }
+                        ],
+                        desc: 'John Ronald Reuel Tolkien, a menudo citado como J. R. R. Tolkien o JRRT, fue un escritor, poeta, filólogo, lingüista y profesor universitario británico, nacido en el Estado Libre de Orange. Conocido principalmente por ser el autor de El hobbit y El Señor de los Anillos.'
+                    }, 
+
+                    {
+                        id: 10,
+                        nombre: 'Mariana Enriquez',
+                        foto: '/static/img/autores/marianaenriquez.jpg',
+                        alt: 'mariana',
+                        fechanac: '1973',
+                        libros: [
+                        { titulo: 'Los peligros de fumar en la cama' }
+                        ],
+                        desc: 'Mariana Enríquez es una escritora, periodista y docente argentina, parte del grupo de escritores conocidos como «nueva narrativa argentina».'
+                    },
+
+                    {
+                        id: 4,
+                        nombre: 'Neil Gaiman',
+                        foto: '/static/img/autores/nielgaiman.jpg',
+                        alt: 'neil',
+                        fechanac: '10 de noviembre de 1960',
+                        libros: [
+                            { titulo: 'Buenos presagios' }
+                        ],
+                        desc: 'Neil Richard Gaiman es un autor de ficción, novelas, cómics, novelas gráficas, no ficción, teatro de audio, películas e historietas y escritor británico. Cultiva el género fantástico. Sus obras incluyen la serie de cómics The Sandman y las novelas Stardust, Coraline y El libro del cementerio.'
+                    },
+
+                    {
+                        id: 9,
+                        nombre: 'Oscar Wilde',
+                        foto: '/static/img/autores/oscarwilde.jpg',
+                        alt: 'oscar',
+                        fechanac: '16 de octubre de 1854',
+                        libros: [
+                            { titulo: 'El retrato de Dorian Gray' }
+                        ],
+                        desc: 'Oscar Fingal OFlahertie Wills Wilde, conocido como Oscar Wilde, fue un escritor, poeta y dramaturgo de origen irlandés. Wilde es considerado uno de los dramaturgos más destacados del Londres victoriano tardío. Además, fue una celebridad de la época debido a su gran y aguzado ingenio.'
+                    },
+
+                    {
+                        id: 2,
+                        nombre: 'Sue Lynn Tan',
+                        foto: '/static/img/autores/suelynntan.jpg',
+                        alt: 'sue lynn',
+                        fechanac: '-',
+                        libros: [
+                            { titulo: 'La hija de la diosa de la Luna' }
+                        ],
+                        desc: 'La escritora Sue Lynn Tan nació en Malasia y estudió en Londres y Francia antes de asentarse en Hong Kong junto a su familia. Tan escribe novelas de fantasía inspiradas por los mitos y leyendas que aprendió a amar desde que era muy pequeña.'
+                    },
+
+                    {
+                        id: 7,
+                        nombre: 'Taylor Jenkins Reid',
+                        foto: '/static/img/autores/taylorjenkins.jpg',
+                        alt: 'taylor',
+                        fechanac: '20 de diciembre de 1983',
+                        libros: [
+                            { titulo: 'Los siete maridos de Evelyn Hugo' }
+                        ],
+                        desc: 'Taylor Jenkins Reid es una escritora, productora de televisión y guionista estadounidense. Escribe principalmente romance y sus obras más destacadas son Los siete maridos de Evelyn Hugo y Todos quieren a Daisy Jones.'
+                    },
+
+                    {
+                       id: 3,
+                        nombre: 'Terry Pratchett',
+                        foto: '/static/img/autores/terrypratchett.jpg',
+                        alt: 'terry',
+                        fechanac: '28 de abril de 1948',
+                        libros: [
+                            { titulo: 'Buenos presagios' },
+                            { titulo: 'El color de la Magia' }
+                        ],
+                        desc: 'Terence David John "Terry" Pratchett fue un escritor británico de fantasía y ciencia ficción. Sus obras más conocidas corresponden a la serie del Mundodisco. Además, escribió novelas juveniles, relatos cortos y colaboró en la redacción de guiones para las adaptaciones televisivas de sus novelas.' 
+                    }
+                ]
+            },
+            mounted() {
+                console.log(this.authors);
+            }
+        });
+    </script>
+{% endblock %}

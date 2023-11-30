@@ -1,163 +1,136 @@
-{%extends "base.html"%}
+{% extends "base.html" %}
 
-{%block titulo%}Editoriales{%endblock%}
+{% block titulo %}Editoriales{% endblock %}
 
-{%block contenido%}
-<main>
-    <aside>
-        <form>
-            <h2 id="1">Allen & Unwin</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/allenandunwin.png" alt="allenunwin">
-            </article>
-            <fieldset>
-                <legend><strong><u>Allen & Unwin</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>1976</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788445000656">El hobbit</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="2">Umbriel</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/umbriel.png" alt="umbriel">
-            </article>
-            <fieldset>
-                <legend><strong><u>Umbriel</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>2003</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788416517862">La hija de la diosa de la Luna</a>, <a href="/libros.html/#9788416517275">Los siete maridos de Evelyn Hugo</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="3">Timun Mas</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/timunmas.png" alt="timunmas">
-            </article>
-            <fieldset>
-                <legend><strong><u>Timun mas</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>2002</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788448006983">Buenos presagios</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="4">Debolsillo</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/debolsillo.png" alt="debolsillo" width="300" height="250">
-            </article>
-            <fieldset>
-                <legend><strong><u>Debolsillo</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>2000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788497596794">El color de la Magia</a>, <a href="/libros.html/#9788499890951">Rebelión en la granja</a>, <a href="/libros.html/#9788499890944">1984</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="5">Península</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/peninsula.jpg" alt="peninsula">
-            </article>
-            <fieldset>
-                <legend><strong><u>Península</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>1964</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788411001984">La guerra de los chips</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="6">edebé</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/edebe.png" alt="edebe">
-            </article>
-            <fieldset>
-                <legend><strong><u>edebé</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>1888</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788468312842">Erik Vogler: Los crímenes del Rey Blanco</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="7">Reino de Cordelia</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/reinodecordelia.jpg" alt="cordelia"  width="200" height="200">
-            </article>
-            <fieldset>
-                <legend><strong><u>Reino de Cordelia</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>1904</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788416968213">El retrato de Dorian Gray</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <br>
-            <h2 id="8">Anagrama</h2>
-            <article>
-                {%load static%}
-                <img src="/static/img/editoriales/anagrama.jpeg" alt="anagrama">
-            </article>
-            <fieldset>
-                <legend><strong><u>Anagarma</u></strong></legend>
-                <table>
-                    <tr>
-                        <td><strong>Creación editorial:</strong></td>
-                        <td>1969</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Libros publicados:</strong></td>
-                        <td><a href="/libros.html/#9788433998248">Los peligros de fumar en la cama</a></td>
-                    </tr>
-                </table>
-            </fieldset>
-        </form>
-    </aside>
-</main>
-{%endblock%}
+{% block contenido %}
+    <div id="app">
+        <main>
+            <aside>
+                {% verbatim  %}
+                    <div v-for="editorial in editorials" :key="editorial.id">
+                    <h2>{{ editorial.nombre }}</h2>
+                    <article>
+                        <img :src="editorial.foto" :alt="editorial.alt">
+                    </article>
+                    <fieldset>
+                        <legend><strong><u>{{ editorial.nombre }}</u></strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>Creación editorial:</strong></td>
+                                <td>{{ editorial.creacion }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Libros publicados:</strong></td>
+                                <td>
+                                    <span v-for="(book, index) in editorial.libros" :key="index">
+                                        {{ book.titulo }}
+                                        <span v-if="index !== editorial.libros.length - 1">, </span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br>
+                </div>
+                {% endverbatim  %}
+            </aside>
+        </main>
+    </div>
+
+
+    <script src="/static/js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                editorials: [
+                    {
+                        id: 1,
+                        nombre: 'Allen & Unwin',
+                        foto: '/static/img/editoriales/allenandunwin.png',
+                        alt: 'allenunwin',
+                        creacion: '1976',
+                        libros: [
+                            { titulo: 'El hobbit' }
+                        ]
+                    },
+                    {
+                        id: 2,
+                        nombre: 'Umbriel',
+                        foto: '/static/img/editoriales/umbriel.png',
+                        alt: 'umbriel',
+                        creacion: '2003',
+                        libros: [
+                            { titulo: 'La hija de la diosa de la Luna' },
+                            { titulo: 'Los siete maridos de Evelyn Hugo' }
+                        ]
+                    },
+                    {
+                        id: 3,
+                        nombre: 'Timun Mas',
+                        foto: '/static/img/editoriales/timunmas.png',
+                        alt: 'timunmas',
+                        creacion: '2000',
+                        libros: [
+                            { titulo: 'Buenos presagios' }
+                        ]
+                    },
+                    {
+                        id: 4,
+                        nombre: 'Debolsillo',
+                        foto: '/static/img/editoriales/debolsillo.png',
+                        alt: 'debolsillo',
+                        creacion: '2000',
+                        libros: [
+                            { titulo: 'El color de la Magia' },
+                            { titulo: 'Rebelión en la granja' }
+                        ]
+                    },
+                    {
+                        id: 5,
+                        nombre: 'Península',
+                        foto: '/static/img/editoriales/peninsula.jpg',
+                        alt: 'peninsula',
+                        creacion: '1964',
+                        libros: [
+                            { titulo: 'La guerra de los chips' }
+                        ]
+                    },
+                    {
+                        id: 6,
+                        nombre: 'edebé',
+                        foto: '/static/img/editoriales/edebe.png',
+                        alt: 'edebe',
+                        creacion: '1888',
+                        libros: [
+                            { titulo: 'Erik Vogler: Los crímenes del Rey Blanco' }
+                        ]
+                    },
+                    {
+                        id: 7,
+                        nombre: 'Reino de Cordelia',
+                        foto: '/static/img/editoriales/reinodecordelia.jpg',
+                        alt: 'cordelia',
+                        creacion: '1904',
+                        libros: [
+                            { titulo: 'El retrato de Dorian Gray' }
+                        ]
+                    },
+                    {
+                        id: 8,
+                        nombre: 'Anagrama',
+                        foto: '/static/img/editoriales/anagrama.jpeg',
+                        alt: 'anagrama',
+                        creacion: '1969',
+                        libros: [
+                            { titulo: 'Los peligros de fumar en la cama' }
+                        ]
+                    }
+                ]
+            },
+            mounted() {
+                console.log(this.editorials);
+            }
+        });
+    </script>
+{% endblock %}

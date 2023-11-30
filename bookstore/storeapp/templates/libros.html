@@ -1,370 +1,222 @@
-{%extends "base.html"%}
+{% extends "base.html" %}
 
-{%block titulo%}Libros{%endblock%}
+{% block titulo %}Libros{% endblock %}
 
-{%block contenido%}
-<main>
-   <aside>
-      <form>
-         <h2 id="9788445000656">El hobbit</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/elhobbit.jpg" alt="hobbit" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>El hobbit</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#1">J. R. R. Tolkien</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#1">Allen & Unwin</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>1982</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788445000656</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>301</td>
-               </tr>
-            </table>
-            <p><strong>Descripción:</strong></p>
-            <p>La trilogía de El hobbit, adaptación cinematográfica basada en la novela homónima, comprende tres películas épicas de fantasía, acción y aventuras: El hobbit: un viaje inesperado, El hobbit: la desolación de Smaug y El hobbit: la batalla de los Cinco Ejércitos.</p>
-         </fieldset>
-         <br>
-         <h2 id="9788416517862">La hija de la diosa de la Luna</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/hijadiosaluna.jpg" alt="hijadiosaluna" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>Ls hija de la diosa de la Luna</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#2">Sue Lynn Tan</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#2">Umbriel</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2022</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788416517862</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>512</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>Un apasionante debut inspirado en la leyenda de Chang'e, la diosa china de la luna, donde la cruzada de una joven por liberar a su madre la llevará a medir sus fuerzas con el inmortal más poderoso del reino</p>
-         </fieldset>
-         <br>
-         <h2 id="9788448006983">Buenos presagios</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/buenospresagios.jpg" alt="buenospresagios" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>Buenos presagios</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritores:</strong></td>
-                  <td><a href="/autor.html/#3">Terry Pratchett</a>, <a href="autor.html/#4">Neil Gaiman</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#3">Timun Mas</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2012</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788448006983</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>400</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>Buenos Presagios es una novela escrita por Terry Pratchett y Neil Gaiman. Buenos Presagios es una comedia de tono irónico sobre el tema de la encarnación del anticristo, el Apocalipsis inminente y la eterna discusión sobre el equilibrio entre el bien y el mal.</p>
-         </fieldset>
-         <br>
-         <h2 id="9788497596794">El color de la Magia</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/colormagia.jpg" alt="colormagia" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>El color de la Magia</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#3">Terry Pratchett</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#4">Debolsillo</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2003</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788497596794</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>288</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>El color de la magia, es la primera obra publicada de la saga del Mundodisco de Terry Pratchett. Esta novela, a diferencia de otras muchas de la serie, está dividida en "libros" que narran historias cortas consecutivas con los mismos protagonistas.</p>
-         </fieldset>
-         <br>
-         <h2 id="9788411001984">La guerra de los chips</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/guerrachips.jpg" alt="guerrachips" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>La guerra de los chips</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#5">Chris Miller</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#5">Peninsula</a>/td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2023</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788411001984</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>544</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>El libro del año. Define el fin de la era de la globalización y explica el mayor conflicto geopolítico desde la guerra fría.</p>
-         </fieldset>
-         <br>
-         <h2 id="9788468312842">Erik Vogler: Los crímenes del Rey Blanco</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/erikvogler.jpg" alt="erikvogler" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>Erik Vogler: Los crímenes del Rey Blanco</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#6">Beatriz Oses</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#6">edebé</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2014</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788468312842</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>144</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>Erik es una adolescente maniático de la limpieza, el orden, el ajedrez, un sabiondo, en fin, 'un pesadito'. Su papá le ha prometido unas vacaciones soñadas, pero por un error de cálculo tendrá que conformarse con ir a casa de su abuela con quien no se lleva nada bien.</p>
-         </fieldset>
-         <br>
-         <h2 id="9788416517275">Los siete maridos de Evelyn Hugo</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/evelynhugo.jpg" alt="evelynhugo" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>Los siete maridos de Evelyn Hugo</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#7">Taylor Jenkins Reid</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#2">Umbriel</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2020</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788416517275</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>384</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>Evelyn Hugo, el ícono de Hollywood que se ha recluido en su edad madura, decide al fin contar la verdad sobre su vida llena de glamour y de escándalos.</p>
-         </fieldset>
-         <h2 id="9788499890951">Rebelión en la granja</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/rebeliongranja.jpg" alt="rebeliongranja" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>Rebelión en la granja</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#8">George Orwell</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#4">Debolsillo</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2013</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788499890951</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>144</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>Rebelión en la granja es una novela corta satírica del escritor británico George Orwell. Publicada en 1945, la obra es una fábula mordaz sobre cómo el régimen soviético de Iósif Stalin corrompe el socialismo llevándolo hacia un tipo de autoritarismo.</p>
-         </fieldset>
-         <h2 id="9788499890944">1984</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/1984.jpg" alt="1984" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>1984</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#8">George Orwell</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#4">Debolsillo</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2013</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788499890944</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>352</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>1984 es una novela política de ficción distópica, escrita por George Orwell entre 1947 y 1948 y publicada el 8 de junio de 1949.</p>
-         </fieldset>
-         <h2 id="9788416968213">El retrato de Dorian Gray</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/doriangray.jpg" alt="doriangray" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>El retrato de Dorian Gray</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#9">Oscar Wilde</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#7">Reino de Cordelia</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2017</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788416968213</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>256</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>El joven Dorian desea permanecer por siempre joven y bello, y que, a cambio, su retrato sea el que envejezca. Seducido por un aristócrata cínico, Dorian disfruta del placer y los excesos, lleva a otras personas a la perdición y no duda en cometer un asesinato.</p>
-         </fieldset>
-         <h2 id="9788433998248">Los peligros de fumar en la cama</h2>
-         <article>
-            {%load static%}
-            <img src="/static/img/libros/fumarcama.jpg" alt="fumarcama" width="200" height="300">
-         </article>
-         <fieldset>
-            <legend><strong>Los peligros de fumar en la cama</strong></legend>
-            <table>
-               <tr>
-                  <td><strong>Escritor:</strong></td>
-                  <td><a href="/autor.html/#10">Marina Enriquez</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Editorial:</strong></td>
-                  <td><a href="/editorial.html/#8">Anagrama</a></td>
-               </tr>
-               <tr>
-                  <td><strong>Año de edición:</strong></td>
-                  <td>2017</td>
-               </tr>
-               <tr>
-                  <td><strong>ISBN:</strong></td>
-                  <td>9788433998248</td>
-               </tr>
-               <tr>
-                  <td><strong>Páginas:</strong></td>
-                  <td>232</td>
-               </tr>
-            </table>
-            <p><strong>Descripción</strong></p>
-            <p>Doce cuentos en los que lo terroríﬁco se inﬁltra en lo cotidiano. Doce relatos perturbadores que llevan el género de terror a una nueva dimensión.</p>
-         </fieldset>
-      </form>
-   </aside>
-</main>
-{%endblock%}
+{% block contenido %}
+    <div id="app">
+        <main>
+            <aside>
+                {% verbatim  %}
+                <div v-for="book in books" :key="book.id">
+                    <h2>{{ book.nombre }}</h2>
+                    <article>
+                        <img :src="book.foto" :alt="book.alt" width="200" height="300">
+                    </article>
+                    <fieldset>
+                        <legend><strong>{{ book.titulo }}</strong></legend>
+                        <table>
+                            <tr>
+                                <td><strong>ISBN:</strong></td>
+                                <td>{{ book.isbn }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Escritor:</strong></td>
+                                <td>
+                                    <span v-for="(author, index) in book.autores" :key="index">
+                                        {{ author.nombre }}
+                                        <span v-if="index !== book.autores.length - 1">, </span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Editorial:</strong></td>
+                                <td>{{ book.editorial.nombre }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Edición:</strong></td>
+                                <td>{{ book.edicion }}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Páginas:</strong></td>
+                                <td>{{ book.pag }}</td>
+                            </tr>
+                        </table>
+                        <p><strong>Descripción:</strong></p>
+                        <p>{{ book.desc }}</p>
+                    </fieldset>
+                    <br>
+                </div>
+                {% endverbatim  %}
+            </aside>
+        </main>
+    </div>
+
+    <script src="/static/js/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                books: [
+                    {
+                        id: 1,
+                        isbn: '9788445000656',
+                        titulo: 'El hobbit',
+                        foto: '/static/img/libros/elhobbit.jpg',
+                        alt: 'hobbit',
+                        autores: [
+                            { nombre: 'J. R. R. Tolkien'}
+                        ],
+                        editorial: { nombre: 'Allen & Unwin' },
+                        edicion: '1982',
+                        pag: '301',
+                        desc: 'La trilogía de El hobbit, adaptación cinematográfica basada en la novela homónima, comprende tres películas épicas de fantasía, acción y aventuras.'
+                    },
+                    {
+                        id: 2,
+                        isbn: '9788416517862',
+                        titulo: 'La hija de la diosa de la Luna',
+                        foto: '/static/img/libros/hijadiosaluna.jpg',
+                        alt: 'hijadiosaluna',
+                        autores: [
+                            { nombre: 'Sue Lynn Tan'}
+                        ],
+                        editorial: { nombre: 'Umbriel' },
+                        edicion: '2022',
+                        pag: '512',
+                        desc: 'Un apasionante debut inspirado en la leyenda de Chang e, la diosa china de la luna, donde la cruzada de una joven por liberar a su madre la llevará a medir sus fuerzas con el inmortal más poderoso del reino.'
+                    },
+                    {
+                        id: 3,
+                        isbn: '9788448006983',
+                        titulo: 'Buenos presagios',
+                        foto: '/static/img/libros/buenospresagios.jpg',
+                        alt: 'buenospresagios',
+                        autores: [
+                            { nombre: 'Terry Pratchett'},
+                            { nombre: 'Neil Gaiman'}
+                        ],
+                        editorial: { nombre: 'Timun Mas' },
+                        edicion: '2012',
+                        pag: '400',
+                        desc: 'Buenos Presagios es una novela escrita por Terry Pratchett y Neil Gaiman. Buenos Presagios es una comedia de tono irónico sobre el tema de la encarnación del anticristo, el Apocalipsis inminente y la eterna discusión sobre el equilibrio entre el bien y el mal.'
+                    },
+                    {
+                        id: 4,
+                        isbn: '9788497596794',
+                        titulo: 'El color de la Magia',
+                        foto: '/static/img/libros/colormagia.jpg',
+                        alt: 'colormagia',
+                        autores: [
+                            { nombre: 'Terry Pratchett'}
+                        ],
+                        editorial: { nombre: 'Debolsillo' },
+                        edicion: '2003',
+                        pag: '288',
+                        desc: 'El color de la magia, es la primera obra publicada de la saga del Mundodisco de Terry Pratchett. Esta novela, a diferencia de otras muchas de la serie, está dividida en "libros" que narran historias cortas consecutivas con los mismos protagonistas.'
+                    },
+                    {
+                        id: 5,
+                        isbn: '9788411001984',
+                        titulo: 'La guerra de los chips',
+                        foto: '/static/img/libros/guerrachips.jpg',
+                        alt: 'guerrachips',
+                        autores: [
+                            { nombre: 'Chris Miller'}
+                        ],
+                        editorial: { nombre: 'Peninsula' },
+                        edicion: '2023',
+                        pag: '544',
+                        desc: 'El libro del año. Define el fin de la era de la globalización y explica el mayor conflicto geopolítico desde la guerra fría.'
+                    },
+                    {
+                        id: 6,
+                        isbn: '9788468312842',
+                        titulo: 'Erik Vogler: Los crímenes del Rey Blanco',
+                        foto: '/static/img/libros/erikvogler.jpg',
+                        alt: 'erikvogler',
+                        autores: [
+                            { nombre: 'Beatriz Oses'}
+                        ],
+                        editorial: { nombre: 'edebé' },
+                        edicion: '2014',
+                        pag: '144',
+                        desc: 'Erik es una adolescente maniático de la limpieza, el orden, el ajedrez, un sabiondo, en fin, "un pesadito". Su papá le ha prometido unas vacaciones soñadas, pero por un error de cálculo tendrá que conformarse con ir a casa de su abuela con quien no se lleva nada bien.'
+                    },
+                    {
+                        id: 7,
+                        isbn: '9788416517275',
+                        titulo: 'Los siete maridos de Evelyn Hugo',
+                        foto: '/static/img/libros/evelynhugo.jpg',
+                        alt: 'evelynhugo',
+                        autores: [
+                            { nombre: 'Taylor Jenkins Reid'}
+                        ],
+                        editorial: { nombre: 'Umbriel' },
+                        edicion: '2020',
+                        pag: '384',
+                        desc: 'Evelyn Hugo, el ícono de Hollywood que se ha recluido en su edad madura, decide al fin contar la verdad sobre su vida llena de glamour y de escándalos.'
+                    },
+                    {
+                        id: 8,
+                        isbn: '9788499890951',
+                        titulo: 'Rebelión en la granja',
+                        foto: '/static/img/libros/rebeliongranja.jpg',
+                        alt: 'rebeliongranja',
+                        autores: [
+                            { nombre: 'George Orwell'}
+                        ],
+                        editorial: { nombre: 'Debolsillo' },
+                        edicion: '2013',
+                        pag: '144',
+                        desc: 'Rebelión en la granja es una novela corta satírica del escritor británico George Orwell. Publicada en 1945, la obra es una fábula mordaz sobre cómo el régimen soviético de Iósif Stalin corrompe el socialismo llevándolo hacia un tipo de autoritarismo.'
+                    },
+                    {
+                        id: 9,
+                        isbn: '9788499890944',
+                        titulo: '1984',
+                        foto: '/static/img/libros/1984.jpg',
+                        alt: '1984',
+                        autores: [
+                            { nombre: 'George Orwell<'}
+                        ],
+                        editorial: { nombre: 'Debolsillo' },
+                        edicion: '2013',
+                        pag: '352',
+                        desc: '1984 es una novela política de ficción distópica, escrita por George Orwell entre 1947 y 1948 y publicada el 8 de junio de 1949.'
+                    },
+                    {
+                        id: 10,
+                        isbn: '9788416968213',
+                        titulo: 'El retrato de Dorian Gray',
+                        foto: '/static/img/libros/doriangray.jpg',
+                        alt: 'doriangray',
+                        autores: [
+                            { nombre: 'Oscar Wilde'}
+                        ],
+                        editorial: { nombre: 'Reino de Cordelia' },
+                        edicion: '2017',
+                        pag: '256',
+                        desc: 'El joven Dorian desea permanecer por siempre joven y bello, y que, a cambio, su retrato sea el que envejezca. Seducido por un aristócrata cínico, Dorian disfruta del placer y los excesos, lleva a otras personas a la perdición y no duda en cometer un asesinato.'
+                    },
+                    {
+                        id: 11,
+                        isbn: '9788433998248',
+                        titulo: 'Los peligros de fumar en la cama',
+                        foto: '/static/img/libros/fumarcama.jpg',
+                        alt: 'fumarcama',
+                        autores: [
+                            { nombre: 'Mariana Enriquez'}
+                        ],
+                        editorial: { nombre: 'Anagrama' },
+                        edicion: '2017',
+                        pag: '232',
+                        desc: 'Doce cuentos en los que lo terroríﬁco se inﬁltra en lo cotidiano. Doce relatos perturbadores que llevan el género de terror a una nueva dimensión.'
+                    },
+                ]
+            },
+            mounted() {
+                console.log(this.books);
+            }
+        });
+    </script>
+{% endblock %}
