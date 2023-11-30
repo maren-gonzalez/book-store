@@ -10,7 +10,7 @@
     <h2>{{autor.nombre}}</h2>
     <article>
        {%load static%}
-       <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}"  width= 270 height=320/>
+       <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}"/>
       </article>
     <fieldset>
       <table>
@@ -21,7 +21,7 @@
       </table>
       <p><strong>Libros:</strong></p>
       {% for libro in libros_del_autor %}
-            <li>{{ libro.titulo }}</li>
+            <li><a href="{% url 'libroDetalle' libro.isbn %}">{{ libro.titulo }}</a></li>
       {% endfor %}
       <p><strong>Descripcion:</strong></p>
       <p> {{ autor.desc}} </p>

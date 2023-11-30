@@ -10,7 +10,7 @@
     <h2>{{ editorial.editorial}}</h2>
     <article>
        {%load static%}
-       <img alt="{{ editorial.editorial }}" src="{% static editorial.foto.url %}" width= 315 height=220/>
+       <img alt="{{ editorial.editorial }}" src="{% static editorial.foto.url %}"/>
       </article>
     <fieldset>
        <table>
@@ -21,7 +21,7 @@
        </table>
        <p><strong>Libros:</strong></p>
       {% for libro in libros_de_la_editorial %}
-         <li>{{ libro.titulo }}</li>
+         <li><a href="{% url 'libroDetalle' libro.isbn %}">{{ libro.titulo }}</a></li>
       {% endfor %}
     </fieldset>
  <form>
