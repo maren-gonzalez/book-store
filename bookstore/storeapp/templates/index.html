@@ -3,7 +3,7 @@
 {%block titulo%}Home{%endblock%}
 
 {%block contenido%}
-<div id="main">
+<div id="main_index">
    <!-- slideshow -->
    <div id="slideshow">
       <ul id="slides">
@@ -39,7 +39,7 @@
          <h5 class="custom color2">INFORMATE</h5>
          <p class="thumb-text">Proporcionamos una recopilación de todas nuestras obras agrupadas por su editorial, para ayudarte a encontrar tu nuevo libro favorito.</p>
       </div>
-      <div>
+      <div id = "libros_al">
          <h1 class="custom">NUEVAS LLEGADAS</h1>
          {% if primeros_libros %}
             {% for libro in primeros_libros %}
