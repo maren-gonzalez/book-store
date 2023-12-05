@@ -1,0 +1,26 @@
+#libros_al {
+    margin-top: 355px
+}
+
+#main_index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#slides {
+    list-style: none;
+    padding: 0;
+}
+
+#slides li {
+    display: inline-block;
+}
+
+#slideshow span,
+#prev,
+#next {
+    display: block;
+}
