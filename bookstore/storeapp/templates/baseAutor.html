@@ -3,29 +3,27 @@
 {% block titulo %} Detalles de {{autor.nombre}} {% endblock %}
 
 {% block contenido %}
+   <h1>Datos del autor</h1>
 
-<h1>Datos del autor</h1>
-
-<form>
-    <h2>{{autor.nombre}}</h2>
-    <article>
-       {%load static%}
-       <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}" width="200" height="300"/>
+   <form>
+      <h2>{{autor.nombre}}</h2>
+      <article>
+         {%load static%}
+         <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}" width="200" height="300">
       </article>
-    <fieldset>
-      <table>
-         <tr>
-            <td><strong>Nacimiento:</strong></td>
-            <td> {{ autor.fechanac}} </td>
-         </tr>
-      </table>
-      <p><strong>Libros:</strong></p>
-      {% for libro in libros_del_autor %}
-            <li><a href="{% url 'libroDetalle' libro.isbn %}">{{ libro.titulo }}</a></li>
-      {% endfor %}
-      <p><strong>Descripcion:</strong></p>
-      <p> {{ autor.desc}} </p>
-    </fieldset>
- <form>
-
+      <fieldset>
+         <table>
+            <tr>
+               <td><strong>Nacimiento:</strong></td>
+               <td> {{ autor.fechanac}} </td>
+            </tr>
+         </table>
+         <p><strong>Libros:</strong></p>
+         {% for libro in libros_del_autor %}
+               <ul><li><a href="{% url 'libroDetalle' libro.isbn %}">{{ libro.titulo }}</a></li></ul>
+         {% endfor %}
+         <p><strong>Descripcion:</strong></p>
+         <p> {{ autor.desc}} </p>
+      </fieldset>
+   </form>
 {% endblock %}

@@ -3,45 +3,45 @@
 {% block titulo %} {{libro.titulo}} {% endblock %}
 
 {% block contenido %}
-<h1>Datos del libro</h1>
-{%if libro%}
-<form>
-    <h2>{{ libro.titulo }}</h2>
-    <article>
-       {%load static%}
-         <img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}"  width="292" height="445"/>
-      </article>
-    <fieldset>
-       <legend><strong> {{ libro.titulo}} </strong></legend>
-       <table>
-          <tr>
-             <td><strong>Escritor:</strong></td>
-             <td> <ul>
-               {% for autor in libro.autores.all %}
-                  <li><a href="{% url 'autorDetalle' autor.autorId %}">{{ autor.nombre }}</a></li>
-               {% endfor %}
-           </ul></td>
-          </tr>
-          <tr>
-             <td><strong>Editorial:</strong></td>
-             <td><a href="{% url 'editorialDetalle' libro.editorial.editorialId %}">{{ libro.editorial.editorial }}</a></td>
-          </tr>
-          <tr>
-             <td><strong>Año de edición:</strong></td>
-             <td>{{libro.edicion}}</td>
-          </tr>
-          <tr>
-             <td><strong>ISBN:</strong></td>
-             <td> {{libro.isbn}} </td>
-          </tr>
-          <tr>
-             <td><strong>Páginas:</strong></td>
-             <td>{{libro.pag}}</td>
-          </tr>
-       </table>
-       <p><strong>Descripción:</strong></p>
-       <p>{{libro.desc}}</p>
-    </fieldset>
- <form>
-{% endif %}
+   <h1>Datos del libro</h1>
+   {%if libro%}
+      <form>
+         <h2>{{ libro.titulo }}</h2>
+         <article>
+            {%load static%}
+               <img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}"  width="292" height="445">
+            </article>
+         <fieldset>
+            <legend><strong> {{ libro.titulo}} </strong></legend>
+            <table>
+               <tr>
+                  <td><strong>Escritor:</strong></td>
+                  <td>
+                     {% for autor in libro.autores.all %}
+                     <ul><li><a href="{% url 'autorDetalle' autor.autorId %}">{{ autor.nombre }}</a></li></ul>
+                     {% endfor %}
+                  </td>
+               </tr>
+               <tr>
+                  <td><strong>Editorial:</strong></td>
+                  <td><a href="{% url 'editorialDetalle' libro.editorial.editorialId %}">{{ libro.editorial.editorial }}</a></td>
+               </tr>
+               <tr>
+                  <td><strong>Año de edición:</strong></td>
+                  <td>{{libro.edicion}}</td>
+               </tr>
+               <tr>
+                  <td><strong>ISBN:</strong></td>
+                  <td> {{libro.isbn}} </td>
+               </tr>
+               <tr>
+                  <td><strong>Páginas:</strong></td>
+                  <td>{{libro.pag}}</td>
+               </tr>
+            </table>
+            <p><strong>Descripción:</strong></p>
+            <p>{{libro.desc}}</p>
+         </fieldset>
+         </form>
+   {% endif %}
 {% endblock %}
