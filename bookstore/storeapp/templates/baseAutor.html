@@ -4,12 +4,11 @@
 
 {% block contenido %}
    <h1>Datos del autor</h1>
-
+   {%load static%}
    <form>
       <h2>{{autor.nombre}}</h2>
       <article>
-         {%load static%}
-         <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}" width="200" height="300">
+         <img alt="{{ autor.nombre }}" src="{% static autor.foto.url %}" id="autorimg" height="300" width="200">
       </article>
       <fieldset>
          <table>

@@ -5,36 +5,32 @@
 {%block contenido%}
 <div id="main_index">
    <!-- slideshow -->
+   {%load static%}
    <div id="slideshow">
       <ul id="slides">
-         {%load static%}
-         <li><img src="/static/slides/1.png" alt=""></li>
-         <li><img src="/static/slides/2.jpg" alt=""></li>
-         <li><img src="/static/slides/3.jpg" alt=""></li>
+         <li><img src="{% static '/slides/1.png' %}" alt=""></li>
+         <li><img src="{% static '/slides/2.jpg' %}" alt=""></li>
+         <li><img src="{% static '/slides/3.jpg' %}" alt=""></li>
       </ul>
-      {%load static%}
-      <span></span> <a href="#"><img src="/static/img/prev-slide.png" alt="" id="prev"></a> <a href="#"><img src="/static/img/next-slide.png" alt="" id="next"></a> 
+      <span></span> <a href="#"><img src="{% static '/img/prev-slide.png' %}" alt="" id="prev"></a> <a href="#"><img src="/static/img/next-slide.png" alt="" id="next"></a> 
    </div>
    <!-- ENDS slideshow -->
    <!-- blocks -->
    <div class="holder">
       <div class="block">
-         {%load static%}
-         <div class="thumb-holder"> <img src="/static/img/entrada/librosheader.jpg" alt="" class="thumb"></div>
+         <div class="thumb-holder"> <img src="{% static '/img/entrada/librosheader.jpg' %}" alt="" class="thumb"></div>
          <h2 class="custom"><a href="libros">NUEVAS LLEGADAS</a></h2>
          <h5 class="custom color2">NOVELAS</h5>
          <p class="thumb-text">Colección de los mejores libros del momento, todos juntos en un mismo lugar.</p>
       </div>
       <div class="block">
-         {%load static%}
-         <div class="thumb-holder"> <img src="/static/img/entrada/escritoresheader.jpg" alt="" class="thumb"></div>
+         <div class="thumb-holder"> <img src="{% static '/img/entrada/escritoresheader.jpg' %}" alt="" class="thumb"></div>
          <h2 class="custom"><a href="autor">SOBRE LOS AUTORES</a></h2>
          <h5 class="custom color2">DESCUBRE LAS OBRAS</h5>
          <p class="thumb-text">Conoce más sobre tus autores favoritos, además de conseguir un listado de todas sus obras disponibles</p>
       </div>
       <div class="block last">
-         {%load static%}
-         <div class="thumb-holder"> <img src="/static/img/entrada/editorialheader.jpg" alt="" class="thumb"></div>
+         <div class="thumb-holder"> <img src="{% static '/img/entrada/editorialheader.jpg' %}" alt="" class="thumb"></div>
          <h2 class="custom"><a href="editorial">EDITORIALES</a></h2>
          <h5 class="custom color2">INFORMATE</h5>
          <p class="thumb-text">Proporcionamos una recopilación de todas nuestras obras agrupadas por su editorial, para ayudarte a encontrar tu nuevo libro favorito.</p>
@@ -44,7 +40,6 @@
          {% if primeros_libros %}
             {% for libro in primeros_libros %}
                <div class="block last">
-                     {% load static %}
                         <div class="thumb-holder"><img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}" class="thumb" width="301" height="116"></div>
                         <a href="{% url 'libroDetalle' libro.isbn %}"><h5 class="custom color2">{{ libro.titulo }}</h5></a>
                </div>

@@ -9,7 +9,7 @@
          <h2>{{ libro.titulo }}</h2>
          <article>
             {%load static%}
-               <img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}"  width="292" height="445">
+               <img alt="{{ libro.titulo }}" src="{% static libro.foto.url %}" id="libroimg" width="292" height="445">
             </article>
          <fieldset>
             <legend><strong> {{ libro.titulo}} </strong></legend>

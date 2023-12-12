@@ -10,7 +10,7 @@
                     <div v-for="editorial in editorials" :key="editorial.id">
                     <h2>{{ editorial.nombre }}</h2>
                     <article>
-                        <img :src="editorial.foto" :alt="editorial.alt" width="300" height="269">
+                        <img :src="editorial.foto" :alt="editorial.alt" id="editorialimg" width="300" height="269">
                     </article>
                     <fieldset>
                         <legend><strong><u>{{ editorial.nombre }}</u></strong></legend>

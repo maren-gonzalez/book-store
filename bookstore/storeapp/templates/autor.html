@@ -10,7 +10,7 @@
                 <div v-for="author in authors" :key="author.id">
                     <h2>{{ author.nombre }}</h2>
                     <article>
-                        <img :src="author.foto" :alt="author.alt" width="200" height="300">
+                        <img :src="author.foto" :alt="author.alt" id="autorimg" height="300" width="200">
                     </article>
                     <fieldset>
                         <legend><strong><u>{{ author.nombre }}</u></strong></legend>

@@ -10,7 +10,7 @@
                 <div v-for="book in books" :key="book.id">
                     <h2>{{ book.nombre }}</h2>
                     <article>
-                        <img :src="book.foto" :alt="book.alt" width="200" height="300">
+                        <img :src="book.foto" :alt="book.alt" id="libroimg" width="200" height="300">
                     </article>
                     <fieldset>
                         <legend><strong>{{ book.titulo }}</strong></legend>
