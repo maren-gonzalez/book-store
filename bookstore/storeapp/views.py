@@ -6,14 +6,18 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def index(request):
-    primeros_libros = Libro.objects.all()
-    listaisbn = [libro.isbn for libro in primeros_libros]
-    return render(request, 'index.html', {'primeros_libros': primeros_libros[:3], 'listaisbn': listaisbn})
+    primeros_libros = Libro.objects.raw('SELECT * FROM( SELECT * FROM storeapp_Libro ORDER BY pag DESC) GROUP BY editorial_id ')
+    return render(request, 'index.html', {'primeros_libros': primeros_libros})
 
 def contact(request):
     if request.method == 'POST':
         form = ComentariosForm(request.POST)
         if form.is_valid():
+            nombre = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            comentario = form.cleaned_data['comments']
+            with open('comentarios.txt', 'a') as archivo:
+                archivo.write(f'Nombre: {nombre}, Email: {email}\nComentario: {comentario}\n')
             return render(request, 'contact.html', {'success': True})
     else:
         form = ComentariosForm()
